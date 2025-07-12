@@ -2,7 +2,6 @@ extends Node2D
 
 var done = null
 
-var mapScript = load("res://scripts/map.gd")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	done = get_node("AnimatedSprite2D2")

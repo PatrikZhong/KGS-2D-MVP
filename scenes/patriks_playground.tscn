@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://bq2j3enjgohjp" path="res://scripts/character_body_2d.gd" id="2_is3tg"]
 [ext_resource type="Texture2D" uid="uid://bs4r5knp61gpd" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Attack01.png" id="3_xmh2h"]
 [ext_resource type="Texture2D" uid="uid://d4j7p5cvrxbjv" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Walk.png" id="5_2s04e"]
-[ext_resource type="PackedScene" uid="uid://ccxvlbc2ev4sg" path="res://scenes/playable_characters.tscn" id="6_2s04e"]
+[ext_resource type="PackedScene" path="res://scenes/playable_characters.tscn" id="6_2s04e"]
 
 [sub_resource type="TileSet" id="TileSet_qxwwh"]
 
