@@ -82,7 +82,7 @@ position = Vector2(618, 165)
 tile_map_data = PackedByteArray("AADx//X/AQAAAAQAAAABAPL/AQABAAUAAAD///L/AQABAAUAAAD5//L/AQABAAUAAADz//L/AQABAAUAAAA=")
 tile_set = SubResource("TileSet_g1rks")
 
-[node name="spawnpoints" type="Node2D" parent="."]
+[node name="spawnpoints" type="Node2D" parent="." groups=["spawnpoints"]]
 script = ExtResource("2_dyd6q")
 
 [node name="Area2D" type="Area2D" parent="spawnpoints"]

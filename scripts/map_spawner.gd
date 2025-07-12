@@ -44,4 +44,6 @@ func _ready():
 	timer.wait_time = 1.0
 	self.timer.timeout.connect(Callable(self, "_on_timeout"))
 	
+	var spawnpoints = get_tree().get_nodes_in_group("spawnpoints")
+	
 	
