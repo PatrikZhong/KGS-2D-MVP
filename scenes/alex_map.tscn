@@ -1,18 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://i6jqpmnjmslh"]
 
-[ext_resource type="PackedScene" uid="uid://b2kld6a17ejku" path="res://scenes/mapblock_2.tscn" id="1_1en6r"]
+[ext_resource type="PackedScene" uid="uid://c6yuww1sjqi1e" path="res://scenes/map_spawner.tscn" id="1_2q81j"]
 [ext_resource type="PackedScene" path="res://scenes/playable_characters.tscn" id="2_1en6r"]
 
 [node name="alex_map" type="Node2D"]
 
-[node name="mapblock_2" parent="." instance=ExtResource("1_1en6r")]
-position = Vector2(12, -142)
+[node name="map_spawner" parent="." instance=ExtResource("1_2q81j")]
+position = Vector2(166, 89)
 
 [node name="character_logic" parent="." instance=ExtResource("2_1en6r")]
-position = Vector2(525, 11)
-scale = Vector2(7.32, 7.32)
-
-[node name="Camera2D" type="Camera2D" parent="character_logic"]
-position = Vector2(45.3552, -30.6011)
-scale = Vector2(0.136612, 0.136612)
-zoom = Vector2(0.36, 0.36)
+scale = Vector2(7.345, 7.345)

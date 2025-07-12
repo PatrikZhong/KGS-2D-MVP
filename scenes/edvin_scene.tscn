@@ -1,11 +1,41 @@
-[gd_scene load_steps=23 format=3 uid="uid://p7rh7vy0mnyl"]
+[gd_scene load_steps=32 format=3 uid="uid://p7rh7vy0mnyl"]
 
 [ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_o0m0l"]
 [ext_resource type="Script" path="res://scenes/playableCharacter.gd" id="1_ydoa4"]
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="3_2hah1"]
+[ext_resource type="Texture2D" uid="uid://jgkp0lqi56w" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Attack01.png" id="3_bc5ec"]
+[ext_resource type="Script" uid="uid://daqo0uhsdmges" path="res://scripts/character_selector.gd" id="4_adr3h"]
+[ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_tw8i6"]
 [ext_resource type="Script" path="res://scripts/character_selector.gd" id="4_adr3h"]
 [ext_resource type="Script" path="res://scripts/playable_character_2.gd" id="5_tw8i6"]
 [ext_resource type="PackedScene" uid="uid://crvjqf1d0ed2t" path="res://scenes/base_monster_logic.tscn" id="6_nreci"]
+[ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="8_r1amp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydoa4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksgxw"]
+atlas = ExtResource("3_bc5ec")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf0no"]
+atlas = ExtResource("3_bc5ec")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1hra"]
+atlas = ExtResource("3_bc5ec")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qydiu"]
+atlas = ExtResource("3_bc5ec")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xif5e"]
+atlas = ExtResource("3_bc5ec")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44mqb"]
+atlas = ExtResource("3_bc5ec")
+region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hah1"]
 atlas = ExtResource("1_o0m0l")
@@ -65,7 +95,25 @@ region = Rect2(700, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_35y5p"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksgxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vf0no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1hra")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qydiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xif5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44mqb")
+}],
 "loop": true,
 "name": &"attack",
 "speed": 5.0
@@ -123,41 +171,57 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydoa4"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_bc5ec"]
+radius = 39.0
 
 [node name="EdvinScene" type="Node2D"]
 
+[node name="mapblock_1" parent="." instance=ExtResource("8_r1amp")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(126, 95)
-zoom = Vector2(2.5, 2.5)
+position = Vector2(391, -490)
+zoom = Vector2(0.36, 0.36)
 
 [node name="character_selector" type="Node2D" parent="."]
 script = ExtResource("4_adr3h")
 
 [node name="playable_character_1" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
+position = Vector2(-597, -10)
+scale = Vector2(5, 5)
+collision_layer = 3
+collision_mask = 7
 script = ExtResource("1_ydoa4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="character_selector/playable_character_1"]
+[node name="unit_collision" type="CollisionShape2D" parent="character_selector/playable_character_1"]
+shape = SubResource("RectangleShape2D_ydoa4")
+
+[node name="unit_sprite" type="AnimatedSprite2D" parent="character_selector/playable_character_1"]
 position = Vector2(0, 2)
 sprite_frames = SubResource("SpriteFrames_35y5p")
-animation = &"walk"
+animation = &"attack"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_1"]
+[node name="unit_selection" type="Area2D" parent="character_selector/playable_character_1"]
+
+[node name="unit_selection_shape" type="CollisionShape2D" parent="character_selector/playable_character_1/unit_selection"]
 shape = SubResource("RectangleShape2D_ydoa4")
 
-[node name="Area2D" type="Area2D" parent="character_selector/playable_character_1"]
+[node name="attack_range" type="Area2D" parent="character_selector/playable_character_1"]
+collision_layer = 0
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_1/Area2D"]
-shape = SubResource("RectangleShape2D_ydoa4")
+[node name="attack_range_shape" type="CollisionShape2D" parent="character_selector/playable_character_1/attack_range"]
+shape = SubResource("CircleShape2D_bc5ec")
 
 [node name="playable_character_2" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
-position = Vector2(66, 0)
+position = Vector2(-191, -30)
+scale = Vector2(5, 5)
+collision_layer = 3
 script = ExtResource("5_tw8i6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="character_selector/playable_character_2"]
 position = Vector2(0, 2)
 sprite_frames = SubResource("SpriteFrames_35y5p")
-animation = &"walk"
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_2"]
 shape = SubResource("RectangleShape2D_ydoa4")
@@ -168,7 +232,10 @@ shape = SubResource("RectangleShape2D_ydoa4")
 shape = SubResource("RectangleShape2D_ydoa4")
 
 [node name="Base_Monster" parent="." instance=ExtResource("6_nreci")]
-position = Vector2(-69, 38)
+position = Vector2(229, -771)
+scale = Vector2(3, 3)
 
-[connection signal="input_event" from="character_selector/playable_character_1/Area2D" to="character_selector/playable_character_1" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="character_selector/playable_character_1/unit_selection" to="character_selector/playable_character_1" method="_on_area_2d_input_event"]
+[connection signal="body_entered" from="character_selector/playable_character_1/attack_range" to="character_selector/playable_character_1" method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="character_selector/playable_character_1/attack_range" to="character_selector/playable_character_1" method="_on_attack_range_body_exited"]
 [connection signal="input_event" from="character_selector/playable_character_2/Area2D" to="character_selector/playable_character_2" method="_on_area_2d_input_event"]
