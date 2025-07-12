@@ -3,5 +3,3 @@
 [ext_resource type="PackedScene" uid="uid://crvjqf1d0ed2t" path="res://scenes/base_monster_logic.tscn" id="1_vfigm"]
 
 [node name="Dragon" instance=ExtResource("1_vfigm")]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
