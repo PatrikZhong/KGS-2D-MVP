@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var character_selector = get_node("../../character_selector")
+@onready var sprite = $unit_sprite
 
 var speed = 500
 var click_position = Vector2()
