@@ -1,9 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://wrp11get3ry8"]
+[gd_scene load_steps=26 format=3 uid="uid://wrp11get3ry8"]
 
 [ext_resource type="PackedScene" uid="uid://crvjqf1d0ed2t" path="res://scenes/base_monster_logic.tscn" id="1_2byfh"]
-[ext_resource type="PackedScene" uid="uid://ccxvlbc2ev4sg" path="res://scenes/playable_characters.tscn" id="2_bfp0d"]
 [ext_resource type="Texture2D" uid="uid://bs4r5knp61gpd" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Attack01.png" id="2_nvs4g"]
-[ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="2_xme4o"]
 [ext_resource type="Texture2D" uid="uid://d1o8rfuyq7lk2" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Idle.png" id="3_xme4o"]
 [ext_resource type="Texture2D" uid="uid://d4j7p5cvrxbjv" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Walk.png" id="4_duj3f"]
 
@@ -167,20 +165,10 @@ animations = [{
 
 [node name="Orc" instance=ExtResource("1_2byfh")]
 
-[node name="mapblock_1" parent="." index="0" instance=ExtResource("2_xme4o")]
-
-[node name="Base_Monster" parent="." index="1"]
+[node name="Base_Monster" parent="." index="0"]
 position = Vector2(744, -217)
 scale = Vector2(5, 5)
 
 [node name="OrcSprite" type="AnimatedSprite2D" parent="Base_Monster" index="3"]
 sprite_frames = SubResource("SpriteFrames_48uv6")
 animation = &"walk"
-
-[node name="character_logic" parent="." index="2" instance=ExtResource("2_bfp0d")]
-position = Vector2(-413, -107)
-scale = Vector2(5, 5)
-
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
-scale = Vector2(0.5, 0.5)
-zoom = Vector2(0.3, 0.3)
