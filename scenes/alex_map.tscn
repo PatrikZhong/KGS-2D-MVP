@@ -1,33 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://i6jqpmnjmslh"]
 
-[gd_scene load_steps=5 format=3 uid="uid://i6jqpmnjmslh"]
-
-[ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="1_1en6r"]
-[ext_resource type="Script" uid="uid://ca0tmp1j78o0d" path="res://scenes/character_body_2d.gd" id="2_huetp"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_821fq"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4cdfr"]
-radius = 0.707013
-
+[ext_resource type="PackedScene" uid="uid://b2kld6a17ejku" path="res://scenes/mapblock_2.tscn" id="1_1en6r"]
+[ext_resource type="PackedScene" path="res://scenes/playable_characters.tscn" id="2_1en6r"]
 
 [node name="alex_map" type="Node2D"]
 
-[node name="mapblock_1" parent="." instance=ExtResource("1_1en6r")]
-position = Vector2(588, 271)
+[node name="mapblock_2" parent="." instance=ExtResource("1_1en6r")]
+position = Vector2(12, -142)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("2_huetp")
+[node name="character_logic" parent="." instance=ExtResource("2_1en6r")]
+position = Vector2(525, 11)
+scale = Vector2(7.32, 7.32)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
-position = Vector2(124, 255)
-scale = Vector2(36.72, 36.72)
-mesh = SubResource("SphereMesh_821fq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(124, 255)
-scale = Vector2(36.72, 36.72)
-shape = SubResource("CircleShape2D_4cdfr")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(124, 259)
+[node name="Camera2D" type="Camera2D" parent="character_logic"]
+position = Vector2(45.3552, -30.6011)
+scale = Vector2(0.136612, 0.136612)
 zoom = Vector2(0.36, 0.36)
