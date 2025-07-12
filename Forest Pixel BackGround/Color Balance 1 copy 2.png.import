@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbmbihvdeqelj"
-path="res://.godot/imported/Vibrance 1 copy 2.png-d8a24b6ef8ab47b609f7c21a6668da6e.ctex"
+uid="uid://crfajjc2xpiap"
+path="res://.godot/imported/Color Balance 1 copy 2.png-4d7240bf48ed4b858c3800fac2216423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Forest Pixel BackGround/Vibrance 1 copy 2.png"
-dest_files=["res://.godot/imported/Vibrance 1 copy 2.png-d8a24b6ef8ab47b609f7c21a6668da6e.ctex"]
+source_file="res://Forest Pixel BackGround/Color Balance 1 copy 2.png"
+dest_files=["res://.godot/imported/Color Balance 1 copy 2.png-4d7240bf48ed4b858c3800fac2216423.ctex"]
 
 [params]
 
