@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccvkjci3glqpo"]
+
+[ext_resource type="Script" uid="uid://cb5p5gmnuvrpg" path="res://scripts/map.gd" id="1_6lv4v"]
+[ext_resource type="Texture2D" uid="uid://dtxrsku6j1bjn" path="res://assets/backgrounds/wooden-floor-background.jpg" id="1_x7x3f"]
+[ext_resource type="Texture2D" uid="uid://f6xrc3k6n3t1" path="res://assets/dungeonkit/Floor_Corner_01.png" id="2_6lv4v"]
+[ext_resource type="Texture2D" uid="uid://b3a160pjru5uy" path="res://assets/icons/pngtree-vector-play-icon-png-image_956416.jpg" id="4_ulj4p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulj4p"]
+atlas = ExtResource("2_6lv4v")
+region = Rect2(0, 0, 409, 249)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oke2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulj4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ulj4p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulj4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ulj4p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="playground" type="Node2D"]
+
+[node name="map" type="Node2D" parent="."]
+script = ExtResource("1_6lv4v")
+
+[node name="Wooden-floor-background" type="Sprite2D" parent="map"]
+position = Vector2(577, 322.5)
+scale = Vector2(0.573, 0.485371)
+texture = ExtResource("1_x7x3f")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="map"]
+position = Vector2(417, 197)
+scale = Vector2(0.404645, 0.375502)
+sprite_frames = SubResource("SpriteFrames_oke2x")
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="map"]
+position = Vector2(440, 467)
+scale = Vector2(0.404645, 0.375502)
+sprite_frames = SubResource("SpriteFrames_oke2x")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="map"]
+position = Vector2(160, 329)
+scale = Vector2(0.404645, 0.375502)
+sprite_frames = SubResource("SpriteFrames_oke2x")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="map"]
+position = Vector2(77, 567)
+scale = Vector2(0.333333, 0.35)
+sprite_frames = SubResource("SpriteFrames_ulj4p")
