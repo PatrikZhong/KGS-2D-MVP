@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://p7rh7vy0mnyl"]
+[gd_scene load_steps=23 format=3 uid="uid://p7rh7vy0mnyl"]
 
 [ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_o0m0l"]
 [ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="1_ydoa4"]
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="3_2hah1"]
 [ext_resource type="Script" uid="uid://daqo0uhsdmges" path="res://scripts/character_selector.gd" id="4_adr3h"]
 [ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_tw8i6"]
+[ext_resource type="PackedScene" path="res://scenes/base_monster_logic.tscn" id="6_nreci"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hah1"]
 atlas = ExtResource("1_o0m0l")
@@ -127,12 +128,13 @@ animations = [{
 [node name="EdvinScene" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(126, 95)
 zoom = Vector2(2.5, 2.5)
 
 [node name="character_selector" type="Node2D" parent="."]
 script = ExtResource("4_adr3h")
 
-[node name="playable_character_1" type="CharacterBody2D" parent="character_selector"]
+[node name="playable_character_1" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
 script = ExtResource("1_ydoa4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="character_selector/playable_character_1"]
@@ -148,7 +150,7 @@ shape = SubResource("RectangleShape2D_ydoa4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_1/Area2D"]
 shape = SubResource("RectangleShape2D_ydoa4")
 
-[node name="playable_character_2" type="CharacterBody2D" parent="character_selector"]
+[node name="playable_character_2" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
 position = Vector2(66, 0)
 script = ExtResource("5_tw8i6")
 
@@ -164,6 +166,9 @@ shape = SubResource("RectangleShape2D_ydoa4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_2/Area2D"]
 shape = SubResource("RectangleShape2D_ydoa4")
+
+[node name="Base_Monster" parent="." instance=ExtResource("6_nreci")]
+position = Vector2(-69, 38)
 
 [connection signal="input_event" from="character_selector/playable_character_1/Area2D" to="character_selector/playable_character_1" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="character_selector/playable_character_2/Area2D" to="character_selector/playable_character_2" method="_on_area_2d_input_event"]
