@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://i6jqpmnjmslh"]
+[gd_scene load_steps=34 format=3 uid="uid://i6jqpmnjmslh"]
 
 [ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="1_1en6r"]
 [ext_resource type="PackedScene" uid="uid://c6yuww1sjqi1e" path="res://scenes/map_spawner.tscn" id="1_2q81j"]
@@ -11,7 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="6_q1wer"]
 [ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="7_s1csu"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_twbp2"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fjpd"]
+radius = 1.0
+height = 9.60001
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksgxw"]
 atlas = ExtResource("4_5i5s7")
@@ -93,7 +95,7 @@ region = Rect2(600, 0, 100, 100)
 atlas = ExtResource("6_q1wer")
 region = Rect2(700, 0, 100, 100)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_t35xx"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1wer"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -171,13 +173,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hw2u0"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_s1csu"]
 radius = 39.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_me3h7"]
-radius = 5.004
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f07nv"]
 
 [node name="alex_map" type="Node2D"]
 
@@ -189,28 +186,28 @@ map_blocks = Array[PackedScene]([ExtResource("1_1en6r"), ExtResource("3_1fjpd"),
 script = ExtResource("2_me3h7")
 
 [node name="playable_character_1" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
-position = Vector2(-597, -10)
+position = Vector2(203, 319)
 scale = Vector2(5, 5)
-collision_layer = 7
-collision_mask = 7
+collision_layer = 3
 script = ExtResource("3_50kkg")
 
 [node name="unit_collision" type="CollisionShape2D" parent="character_selector/playable_character_1"]
-position = Vector2(0, 4.8)
-scale = Vector2(0.4, 0.4)
-shape = SubResource("CircleShape2D_twbp2")
+position = Vector2(0.599991, 8.4)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_1fjpd")
 
 [node name="unit_sprite" type="AnimatedSprite2D" parent="character_selector/playable_character_1"]
 position = Vector2(0, 2)
-sprite_frames = SubResource("SpriteFrames_t35xx")
+sprite_frames = SubResource("SpriteFrames_q1wer")
 animation = &"attack"
 
 [node name="attack_range" type="Area2D" parent="character_selector/playable_character_1"]
+visible = false
 collision_layer = 0
 collision_mask = 4
 
 [node name="attack_range_shape" type="CollisionShape2D" parent="character_selector/playable_character_1/attack_range"]
-shape = SubResource("CircleShape2D_hw2u0")
+shape = SubResource("CircleShape2D_s1csu")
 
 [node name="playable_character_2" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
 position = Vector2(-191, -30)
@@ -218,20 +215,20 @@ scale = Vector2(5, 5)
 collision_layer = 3
 script = ExtResource("7_s1csu")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="character_selector/playable_character_2"]
+[node name="unit_collision" type="CollisionShape2D" parent="character_selector/playable_character_2"]
+position = Vector2(0.599991, 8.4)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_1fjpd")
+
+[node name="unit_sprite" type="AnimatedSprite2D" parent="character_selector/playable_character_2"]
 position = Vector2(0, 2)
-sprite_frames = SubResource("SpriteFrames_t35xx")
+sprite_frames = SubResource("SpriteFrames_q1wer")
 animation = &"attack"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_2"]
-position = Vector2(0, 4.4)
-shape = SubResource("CircleShape2D_me3h7")
+[node name="attack_range" type="Area2D" parent="character_selector/playable_character_2"]
+visible = false
+collision_layer = 0
+collision_mask = 4
 
-[node name="Area2D" type="Area2D" parent="character_selector/playable_character_2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_2/Area2D"]
-shape = SubResource("RectangleShape2D_f07nv")
-
-[connection signal="body_entered" from="character_selector/playable_character_1/attack_range" to="character_selector/playable_character_1" method="_on_attack_range_body_entered"]
-[connection signal="body_exited" from="character_selector/playable_character_1/attack_range" to="character_selector/playable_character_1" method="_on_attack_range_body_exited"]
-[connection signal="input_event" from="character_selector/playable_character_2/Area2D" to="character_selector/playable_character_2" method="_on_area_2d_input_event"]
+[node name="attack_range_shape" type="CollisionShape2D" parent="character_selector/playable_character_2/attack_range"]
+shape = SubResource("CircleShape2D_s1csu")
