@@ -14,12 +14,9 @@ func _on_timeout():
 	timer.stop()
 
 func _on_zone_testsignal():
-	if timer.is_stopped():
-		timer.start()
-		current_map.queue_free()
-		emit_signal("redrawing_map")
-		emit_signal("timeout")
-		current_map=spawn_new_map()
+	Globals.done_collumns.append(Globals.done_collumns[-1] + 1)
+
+	get_tree().change_scene_to_file("res://scenes/rasmus_playground.tscn")
 	
 		
 func spawn_new_map():

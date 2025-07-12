@@ -28,6 +28,6 @@ func _input(event: InputEvent) -> void:
 			var mouse_pos = get_global_mouse_position()
 			if _is_sprite_clicked(play_button, mouse_pos):
 				if (Globals.done_collumns[-1]) == 0:
-					get_tree().change_scene_to_file("res://scenes/test_scene.tscn")
+					get_tree().change_scene_to_file("res://scenes/alex_map.tscn")
 				else:
 					get_tree().change_scene_to_file("res://scenes/rasmus_playground.tscn")

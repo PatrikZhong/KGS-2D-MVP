@@ -26,7 +26,6 @@ func updateAnimation(input: state):
 			sprite.play("attack")
 		state.walk:
 			sprite.play("walk")
-	1
 func _physics_process(delta):
 	updateAnimation(currentState)
 	
