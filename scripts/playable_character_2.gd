@@ -27,14 +27,12 @@ func updateAnimation(input: state):
 			sprite.play("walk")
 		state.attack:
 			sprite.play("attack")
-	1
+
 func _physics_process(delta):
 	updateAnimation(currentState)
 	
 	if area2d.has_overlapping_areas():
 		print("OVERLAPPING!")
-	
-	print(area2d.get_overlapping_areas())
 	
 	if Input.is_action_just_pressed("left_mouse"):
 		if character_selector.active == 2:

@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var character_selector = get_node("../../character_selector")
 @onready var sprite = $unit_sprite
+@onready var attack_range = get_node("attack_range")
 
 var speed = 500
 var click_position = Vector2()
@@ -26,9 +27,12 @@ func updateAnimation(input: state):
 			sprite.play("attack")
 		state.walk:
 			sprite.play("walk")
-	1
+	
 func _physics_process(delta):
 	updateAnimation(currentState)
+	
+	if attack_range.has_overlapping_bodies():
+		updateAnimation(state.attack)
 	
 	if Input.is_action_just_pressed("left_mouse"):
 		if character_selector.active == 1:
@@ -45,11 +49,3 @@ func _physics_process(delta):
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_just_pressed("left_mouse"):
 		print("selected this unit lol")
-
-func _on_attack_range_body_entered(body: Node2D) -> void:
-	print("entered attack range")
-	updateAnimation(state.attack)
-
-func _on_attack_range_body_exited(body: Node2D) -> void:
-	print("exited attack range")
-	updateAnimation(state.idle)
