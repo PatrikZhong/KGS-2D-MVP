@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var character_selector = get_node("../../character_selector")
+@onready var character_selector = get_parent()
 @onready var sprite = $unit_sprite
 @onready var attack_range = get_node("attack_range")
 
@@ -41,6 +41,12 @@ func _physics_process(delta):
 		velocity = target_position * speed
 		updateAnimation(state.walk)
 		move_and_slide()
+		
+		if velocity.x < 0:
+			sprite.flip_h = true
+		elif velocity.x > 0:
+			sprite.flip_h = false
+		
 	elif currentState != state.attack:
 		updateAnimation(state.idle)
 		
