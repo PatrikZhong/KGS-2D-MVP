@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://crvjqf1d0ed2t"]
 
-[ext_resource type="Script" uid="uid://bq2j3enjgohjp" path="res://scripts/character_body_2d.gd" id="1_tv103"]
+[ext_resource type="Script" uid="uid://bq2j3enjgohjp" path="res://scripts/monster_behaviour.gd" id="1_tv103"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3vl0"]
 radius = 9.66665
