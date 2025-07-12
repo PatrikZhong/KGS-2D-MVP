@@ -192,7 +192,6 @@ sprite_frames = SubResource("SpriteFrames_ltyrd")
 animation = &"attack"
 
 [node name="attack_range" type="Area2D" parent="character_selector/playable_character_1"]
-scale = Vector2(1, 1)
 collision_layer = 0
 collision_mask = 4
 
