@@ -1,0 +1,64 @@
+extends Node2D
+
+var node1 = null
+var node2 = null
+var node3 = null
+
+var nodes = []
+
+var play_button = null 
+
+var selected = null
+
+signal path_selected
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	node1 = get_node("AnimatedSprite2D2")
+	node2 = get_node("AnimatedSprite2D3")
+	node3 = get_node("AnimatedSprite2D4")
+	
+	nodes = [node1, node2, node3]
+	
+	play_button = get_node("AnimatedSprite2D")
+	play_button.visible = false
+	
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	
+func _is_sprite_clicked(sprite: AnimatedSprite2D, mouse_pos: Vector2) -> bool:
+	var texture = sprite.sprite_frames.get_frame_texture(sprite.animation, sprite.frame)
+	if texture == null:
+		return false
+		
+	var size = texture.get_size()
+	var local_mouse_pos = sprite.to_local(mouse_pos)
+	var half_size = (size * 0.5) * sprite.scale
+			
+	return abs(local_mouse_pos.x) <= half_size.x and abs(local_mouse_pos.y) <= half_size.y
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			var mouse_pos = get_global_mouse_position()
+			for node in nodes:
+				if _is_sprite_clicked(node, mouse_pos):
+					node.modulate = Color(0.6, 1.0, 0.6)
+					if selected != null and selected != node:
+						selected.modulate = Color(1, 1, 1)
+					selected = node
+					play_button.visible = true
+					
+			if _is_sprite_clicked(play_button, mouse_pos):
+				print("starting!")
+				_send_selected()
+		
+func _send_selected() -> void:
+	print("sending selected")
+	emit_signal("path_selected")
+	
+					
