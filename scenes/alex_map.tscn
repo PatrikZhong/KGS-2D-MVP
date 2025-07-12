@@ -1,9 +1,12 @@
-[gd_scene load_steps=33 format=3 uid="uid://i6jqpmnjmslh"]
+[gd_scene load_steps=36 format=3 uid="uid://i6jqpmnjmslh"]
 
+[ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="1_1en6r"]
 [ext_resource type="PackedScene" uid="uid://c6yuww1sjqi1e" path="res://scenes/map_spawner.tscn" id="1_2q81j"]
 [ext_resource type="Script" path="res://scripts/character_selector.gd" id="2_me3h7"]
+[ext_resource type="PackedScene" uid="uid://b2kld6a17ejku" path="res://scenes/mapblock_2.tscn" id="3_1fjpd"]
 [ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="3_50kkg"]
 [ext_resource type="Texture2D" uid="uid://jgkp0lqi56w" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Attack01.png" id="4_5i5s7"]
+[ext_resource type="PackedScene" uid="uid://dwl7d1e1v033p" path="res://scenes/mapblock_3.tscn" id="4_q1wer"]
 [ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="5_1fjpd"]
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="6_q1wer"]
 [ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="7_s1csu"]
@@ -180,6 +183,7 @@ radius = 5.004
 
 [node name="map_spawner" parent="." instance=ExtResource("1_2q81j")]
 position = Vector2(166, 89)
+map_blocks = Array[PackedScene]([ExtResource("1_1en6r"), ExtResource("3_1fjpd"), ExtResource("4_q1wer")])
 
 [node name="character_selector" type="Node2D" parent="."]
 script = ExtResource("2_me3h7")
