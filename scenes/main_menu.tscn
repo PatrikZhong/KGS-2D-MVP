@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp5ntpybtlb7a"]
+
+[ext_resource type="Script" uid="uid://dco75m6p35e38" path="res://scripts/menu.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://36vcia0mrt2a" path="res://assets/buttons/play.png" id="1_l6cm7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ekxnf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l6cm7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="menu" type="Node2D" parent="."]
+script = ExtResource("1_ekxnf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="menu"]
+position = Vector2(544, 140)
+sprite_frames = SubResource("SpriteFrames_ekxnf")
