@@ -1,7 +1,6 @@
 extends CharacterBody2D
-
-@onready var sprite = $AnimatedSprite2D
-var run_speed = 5
+@onready var sprite = $OrcSprite
+var run_speed = 20
 enum state {
 	idle, 
 	walk, 
@@ -10,7 +9,7 @@ enum state {
 }
 var current_state = state.idle
 var chase = false
-var player = null
+var target_player = null  # Changed from 'player' to 'target_player'
 
 func updateState(new_state):
 	current_state = new_state
@@ -24,27 +23,33 @@ func updateState(new_state):
 
 func _ready() -> void:
 	updateState(state.idle)
-	#player = get_parent()
-	player = get_tree().get_first_node_in_group("Players")
+	# No longer need to get first player in group
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if chase:
-		velocity = position.direction_to(player.position) * run_speed
+	if chase and target_player:
+		velocity = position.direction_to(target_player.position) * run_speed
 		move_and_slide()
-	
+
 func _on_initiate_chase_body_entered(body: Node2D) -> void:
-	updateState(state.walk) # Replace with function body.
-	
-	chase = true
+	# Check if the body is in the Players group
+	if body.is_in_group("Players"):
+		target_player = body
+		updateState(state.walk)
+		chase = true
 
 func _on_initiate_chase_body_exited(body: Node2D) -> void:
-	chase = false
-	updateState(state.idle)
+	# Only stop chasing if the exiting body is our current target
+	if body == target_player:
+		chase = false
+		target_player = null
+		updateState(state.idle)
 
 func _on_initiate_attack_body_entered(body: Node2D) -> void:
-	updateState(state.attack) # Replace with function body.
+	# Only attack if this is our current target
+	if body == target_player:
+		updateState(state.attack)
 
-	
 func _on_initiate_attack_body_exited(body: Node2D) -> void:
-	updateState(state.walk)
+	# Only change state if the exiting body is our current target
+	if body == target_player:
+		updateState(state.walk)
