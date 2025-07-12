@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=4 uid="uid://bhcxljtkxr00o"]
+[gd_scene load_steps=5 format=4 uid="uid://bhcxljtkxr00o"]
 
 [ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_7o58n"]
+[ext_resource type="PackedScene" uid="uid://cg0nx84532m4k" path="res://scenes/door_zone.tscn" id="1_fvpig"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7o58n"]
 texture = ExtResource("1_7o58n")
@@ -50,6 +51,14 @@ sources/1 = SubResource("TileSetAtlasSource_7o58n")
 
 [node name="mapblock_1" type="Node2D"]
 
+[node name="door_zones" type="Node2D" parent="."]
+
+[node name="door_zone" parent="door_zones" instance=ExtResource("1_fvpig")]
+position = Vector2(-285, -897)
+
+[node name="door_zone2" parent="door_zones" instance=ExtResource("1_fvpig")]
+position = Vector2(1293, -417)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD+////AQAAAAEAAAD9/wAAAQABAAEAAAD9/wEAAQABAAEAAAD+/wEAAQAAAAEAAAD+/wIAAQABAAEAAAD9/wIAAQABAAEAAAD+/wAAAQABAAEAAAD9////AQAAAAEAAAD9//7/AQAAAAEAAAD8//7/AQAAAAEAAAD7//7/AQAAAAEAAAD+//7/AQAAAAEAAAD///7/AQAAAAEAAAD///3/AQAAAAEAAAAAAP3/AQAAAAEAAAABAP3/AQAAAAEAAAABAPz/AQAAAAEAAAAAAPz/AQAAAAEAAAAAAPv/AQAAAAEAAAD///v/AQAAAAEAAAD///z/AQAAAAEAAAD+//3/AQAAAAEAAAD9//3/AQAAAAEAAAD8//3/AQAAAAEAAAD+//z/AQAAAAEAAAD7//3/AQAAAAEAAAD6//z/AQAAAAEAAAD7//z/AQAAAAEAAAD7//v/AQAAAAEAAAD8//r/AQAAAAEAAAD7//r/AQAAAAEAAAD8//n/AQAAAAEAAAD9//n/AQAAAAEAAAD6//3/AQAAAAEAAAD5//z/AQACAAMAAAAAAPr/AQABAAMAAAD+/wMAAQADAAMAAAA=")
 tile_set = SubResource("TileSet_m7r1v")
@@ -74,5 +83,5 @@ build_mode = 1
 polygon = PackedVector2Array(-18, 18, -79, 47, -119, 23, -159, 44, -132, 65, -800, 401, -1197, 203, -531, -135, -470, -106, -428, -132, -464, -166, -404, -193, -804, -401, -731, -435, -655, -396, -585, -430, -655, -472, -602, -497, -794, -594, -398, -797, -195, -694, 201, -892, 404, -794, 601, -891, 676, -865, 607, -829, 672, -796, 724, -832, 998, -698, 942, -667, 877, -713, 801, -671, 865, -637, 798, -595, 601, -700, 400, -600, 203, -704, -204, -500, 194, -298, 397, -403, 594, -298, 797, -403, 1197, -200, 999, -101, 1193, -3, 1139, 26, 1069, -21, 1001, 29, 1074, 66, 936, 133, 867, 84, 794, 128, 862, 168, 796, 202, 406, -5, 200, 102, 1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(322, -464)
+position = Vector2(243, -418)
 zoom = Vector2(0.33, 0.33)

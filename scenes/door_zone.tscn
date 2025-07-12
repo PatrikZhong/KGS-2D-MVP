@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg0nx84532m4k"]
+
+[ext_resource type="Script" uid="uid://b7dljkv213dub" path="res://scripts/door_zone.gd" id="1_q67vx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1icii"]
+
+[node name="door_zone" type="Node2D"]
+script = ExtResource("1_q67vx")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2.225, 2.225)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1icii")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

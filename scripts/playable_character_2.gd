@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 @onready var sprite = $AnimatedSprite2D
 @onready var character_selector = get_node("../../character_selector")
+@onready var area2d = $Area2D
 
-var speed = 100
+var speed = 500
 var click_position = Vector2()
 var target_position = Vector2()
 var currentState = state.idle
@@ -30,6 +31,11 @@ func updateAnimation(input: state):
 func _physics_process(delta):
 	updateAnimation(currentState)
 	
+	if area2d.has_overlapping_areas():
+		print("OVERLAPPING!")
+	
+	print(area2d.get_overlapping_areas())
+	
 	if Input.is_action_just_pressed("left_mouse"):
 		if character_selector.active == 2:
 			click_position = get_global_mouse_position()
@@ -41,7 +47,3 @@ func _physics_process(delta):
 		move_and_slide() 
 	else:
 		updateAnimation(state.idle)
-
-func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if Input.is_action_just_pressed("left_mouse"):
-		print("selected this unit lol")
