@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://p7rh7vy0mnyl"]
 
 [ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_o0m0l"]
-[ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scenes/playableCharacter.gd" id="1_ydoa4"]
+[ext_resource type="Script" path="res://scenes/playableCharacter.gd" id="1_ydoa4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydoa4"]
 
