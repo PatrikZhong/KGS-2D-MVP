@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=5 format=3 uid="uid://i6jqpmnjmslh"]
 
 [ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="1_1en6r"]
@@ -7,6 +8,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4cdfr"]
 radius = 0.707013
+
 
 [node name="alex_map" type="Node2D"]
 

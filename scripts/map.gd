@@ -10,6 +10,13 @@ var play_button = null
 
 var selected = null
 
+var done_collumns = [0]
+
+var layers = {
+	1: [node1],
+	2: [node2, node3],
+}
+
 signal path_selected
 
 # Called when the node enters the scene tree for the first time.
@@ -22,6 +29,15 @@ func _ready() -> void:
 	
 	play_button = get_node("AnimatedSprite2D")
 	play_button.visible = false
+	
+	layers = {
+		1: [node1],
+		2: [node2, node3],
+	}
+	
+	for column in done_collumns.slice(1, done_collumns.size()):
+		for node in layers[column]:
+			node.modulate = Color(0.5, 0.5, 0.5)
 	
 	pass # Replace with function body.
 
@@ -47,11 +63,13 @@ func _input(event: InputEvent) -> void:
 			var mouse_pos = get_global_mouse_position()
 			for node in nodes:
 				if _is_sprite_clicked(node, mouse_pos):
-					node.modulate = Color(0.6, 1.0, 0.6)
-					if selected != null and selected != node:
-						selected.modulate = Color(1, 1, 1)
-					selected = node
-					play_button.visible = true
+					var next_layer = done_collumns[-1] + 1
+					if layers.has(next_layer) and node in layers[next_layer]:
+						node.modulate = Color(0.6, 1.0, 0.6)
+						if selected != null and selected != node:
+							selected.modulate = Color(1, 1, 1)
+						selected = node
+						play_button.visible = true
 					
 			if _is_sprite_clicked(play_button, mouse_pos):
 				print("starting!")

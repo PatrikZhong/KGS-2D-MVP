@@ -1,69 +1,68 @@
-[gd_scene load_steps=23 format=3 uid="uid://p7rh7vy0mnyl"]
+[gd_scene load_steps=22 format=3 uid="uid://bibtng3knxu7t"]
 
-[ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_o0m0l"]
-[ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="1_ydoa4"]
-[ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="3_2hah1"]
-[ext_resource type="Script" uid="uid://daqo0uhsdmges" path="res://scripts/character_selector.gd" id="4_adr3h"]
-[ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_tw8i6"]
-[ext_resource type="PackedScene" uid="uid://crvjqf1d0ed2t" path="res://scenes/base_monster_logic.tscn" id="6_nreci"]
+[ext_resource type="Script" uid="uid://daqo0uhsdmges" path="res://scripts/character_selector.gd" id="1_80rj2"]
+[ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="2_oiift"]
+[ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="3_yh610"]
+[ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="4_sg6do"]
+[ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_mmyk7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hah1"]
-atlas = ExtResource("1_o0m0l")
+atlas = ExtResource("3_yh610")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_adr3h"]
-atlas = ExtResource("1_o0m0l")
+atlas = ExtResource("3_yh610")
 region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tw8i6"]
-atlas = ExtResource("1_o0m0l")
+atlas = ExtResource("3_yh610")
 region = Rect2(200, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nreci"]
-atlas = ExtResource("1_o0m0l")
+atlas = ExtResource("3_yh610")
 region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bc5ec"]
-atlas = ExtResource("1_o0m0l")
+atlas = ExtResource("3_yh610")
 region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1amp"]
-atlas = ExtResource("1_o0m0l")
+atlas = ExtResource("3_yh610")
 region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_35y5p"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnqxq"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eway6"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(200, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnogr"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iq1of"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_emyj1"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s4a0e"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(600, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gwm2k"]
-atlas = ExtResource("3_2hah1")
+atlas = ExtResource("4_sg6do")
 region = Rect2(700, 0, 100, 100)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_35y5p"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_iv7qq"]
 animations = [{
 "frames": [],
 "loop": true,
@@ -123,52 +122,45 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydoa4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ogdp"]
 
-[node name="EdvinScene" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(126, 95)
-zoom = Vector2(2.5, 2.5)
+[node name="character_logic" type="Node2D"]
 
 [node name="character_selector" type="Node2D" parent="."]
-script = ExtResource("4_adr3h")
+script = ExtResource("1_80rj2")
 
 [node name="playable_character_1" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
-script = ExtResource("1_ydoa4")
+script = ExtResource("2_oiift")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="character_selector/playable_character_1"]
 position = Vector2(0, 2)
-sprite_frames = SubResource("SpriteFrames_35y5p")
+sprite_frames = SubResource("SpriteFrames_iv7qq")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_1"]
-shape = SubResource("RectangleShape2D_ydoa4")
+shape = SubResource("RectangleShape2D_5ogdp")
 
 [node name="Area2D" type="Area2D" parent="character_selector/playable_character_1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_1/Area2D"]
-shape = SubResource("RectangleShape2D_ydoa4")
+shape = SubResource("RectangleShape2D_5ogdp")
 
 [node name="playable_character_2" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
 position = Vector2(66, 0)
-script = ExtResource("5_tw8i6")
+script = ExtResource("5_mmyk7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="character_selector/playable_character_2"]
 position = Vector2(0, 2)
-sprite_frames = SubResource("SpriteFrames_35y5p")
+sprite_frames = SubResource("SpriteFrames_iv7qq")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_2"]
-shape = SubResource("RectangleShape2D_ydoa4")
+shape = SubResource("RectangleShape2D_5ogdp")
 
 [node name="Area2D" type="Area2D" parent="character_selector/playable_character_2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="character_selector/playable_character_2/Area2D"]
-shape = SubResource("RectangleShape2D_ydoa4")
-
-[node name="Base_Monster" parent="." instance=ExtResource("6_nreci")]
-position = Vector2(-69, 38)
+shape = SubResource("RectangleShape2D_5ogdp")
 
 [connection signal="input_event" from="character_selector/playable_character_1/Area2D" to="character_selector/playable_character_1" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="character_selector/playable_character_2/Area2D" to="character_selector/playable_character_2" method="_on_area_2d_input_event"]
