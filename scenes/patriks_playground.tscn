@@ -1,8 +1,8 @@
 [gd_scene load_steps=41 format=3 uid="uid://ddsalsaug557r"]
 
-[ext_resource type="Texture2D" uid="uid://bu01qowib8mse" path="res://assets/Forest Pixel BackGround/BG1.png" id="1_gvsmn"]
+[ext_resource type="Texture2D" uid="uid://bu01qowib8mse" path="res://Forest Pixel BackGround/BG1.png" id="1_gvsmn"]
 [ext_resource type="Texture2D" uid="uid://d1o8rfuyq7lk2" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Idle.png" id="1_qxwwh"]
-[ext_resource type="Script" uid="uid://bq2j3enjgohjp" path="res://scripts/character_body_2d.gd" id="2_is3tg"]
+[ext_resource type="Script" path="res://scripts/character_body_2d.gd" id="2_is3tg"]
 [ext_resource type="Texture2D" uid="uid://bs4r5knp61gpd" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Attack01.png" id="3_xmh2h"]
 [ext_resource type="Texture2D" uid="uid://d4j7p5cvrxbjv" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Walk.png" id="5_2s04e"]
 [ext_resource type="Script" path="res://scenes/playableCharacter.gd" id="6_m4jjt"]
@@ -169,7 +169,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ik4fe"]
-radius = 9.66667
+radius = 9.66665
 height = 19.3333
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gvsmn"]
