@@ -186,9 +186,8 @@ zoom = Vector2(0.45, 0.45)
 script = ExtResource("4_adr3h")
 
 [node name="playable_character_1" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
-position = Vector2(-597, -10)
+position = Vector2(214, 318)
 scale = Vector2(5, 5)
-collision_layer = 7
 collision_mask = 7
 script = ExtResource("3_r1amp")
 
@@ -227,8 +226,5 @@ shape = SubResource("RectangleShape2D_ydoa4")
 shape = SubResource("RectangleShape2D_ydoa4")
 
 [node name="Orc" parent="." instance=ExtResource("8_35y5p")]
-position = Vector2(198, -5)
 
-[connection signal="body_entered" from="character_selector/playable_character_1/attack_range" to="character_selector/playable_character_1" method="_on_attack_range_body_entered"]
-[connection signal="body_exited" from="character_selector/playable_character_1/attack_range" to="character_selector/playable_character_1" method="_on_attack_range_body_exited"]
 [connection signal="input_event" from="character_selector/playable_character_2/Area2D" to="character_selector/playable_character_2" method="_on_area_2d_input_event"]

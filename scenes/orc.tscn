@@ -169,15 +169,6 @@ animations = [{
 position = Vector2(744, -217)
 scale = Vector2(5, 5)
 collision_layer = 7
-collision_mask = 7
-
-[node name="InitiateChase" parent="Base_Monster" index="1"]
-collision_layer = 0
-collision_mask = 2
-
-[node name="InitiateAttack" parent="Base_Monster" index="2"]
-collision_layer = 0
-collision_mask = 2
 
 [node name="OrcSprite" type="AnimatedSprite2D" parent="Base_Monster" index="3"]
 sprite_frames = SubResource("SpriteFrames_48uv6")
