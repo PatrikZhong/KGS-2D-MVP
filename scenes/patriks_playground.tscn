@@ -1,12 +1,100 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddsalsaug557r"]
+[gd_scene load_steps=14 format=3 uid="uid://ddsalsaug557r"]
+
+[ext_resource type="Texture2D" uid="uid://bu01qowib8mse" path="res://assets/Forest Pixel BackGround/BG1.png" id="1_gvsmn"]
+[ext_resource type="Texture2D" uid="uid://d1o8rfuyq7lk2" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Idle.png" id="1_qxwwh"]
+
+[sub_resource type="TileSet" id="TileSet_qxwwh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvsmn"]
+atlas = ExtResource("1_qxwwh")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_is3tg"]
+atlas = ExtResource("1_qxwwh")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7q2k"]
+atlas = ExtResource("1_qxwwh")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmh2h"]
+atlas = ExtResource("1_qxwwh")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2s04e"]
+atlas = ExtResource("1_qxwwh")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4jjt"]
+atlas = ExtResource("1_qxwwh")
+region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bok77"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvsmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_is3tg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7q2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmh2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2s04e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4jjt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ik4fe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvsmn"]
+radius = 61.0737
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_is3tg"]
+radius = 19.3506
 
 [node name="PatriksPlayground" type="Node2D"]
 
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_qxwwh")
+
+[node name="TextureRect" type="TextureRect" parent="TileMapLayer"]
+offset_left = -518.0
+offset_top = -286.0
+offset_right = 628.0
+offset_bottom = 365.0
+texture = ExtResource("1_gvsmn")
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(225, 180)
+scale = Vector2(3, 3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_bok77")
+frame_progress = 0.811665
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_ik4fe")
+
+[node name="InitiateChase" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/InitiateChase"]
+shape = SubResource("CircleShape2D_gvsmn")
+
+[node name="InitiateAttack" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/InitiateAttack"]
+shape = SubResource("CircleShape2D_is3tg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(56, 39)
