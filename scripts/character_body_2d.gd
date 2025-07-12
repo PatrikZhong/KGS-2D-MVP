@@ -24,7 +24,7 @@ func updateState(new_state):
 
 func _ready() -> void:
 	updateState(state.idle)
-	#player = get_node("../playable_character")
+	#player = get_parent()
 	player = get_tree().get_first_node_in_group("Players")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
