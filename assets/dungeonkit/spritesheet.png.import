@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhmn4isqfuu8"
-path="res://.godot/imported/Pillar_03.png-e8a523230bd822320885ac6a9cb72db5.ctex"
+uid="uid://cvdrbsmplrx2q"
+path="res://.godot/imported/spritesheet.png-757d3f563dc07be12219877ceb223c89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dungeonkit/Pillar_03.png"
-dest_files=["res://.godot/imported/Pillar_03.png-e8a523230bd822320885ac6a9cb72db5.ctex"]
+source_file="res://assets/dungeonkit/spritesheet.png"
+dest_files=["res://.godot/imported/spritesheet.png-757d3f563dc07be12219877ceb223c89.ctex"]
 
 [params]
 
