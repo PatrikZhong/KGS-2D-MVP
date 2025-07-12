@@ -1,3 +1,83 @@
-[gd_scene format=3 uid="uid://p7rh7vy0mnyl"]
+[gd_scene load_steps=11 format=3 uid="uid://p7rh7vy0mnyl"]
+
+[ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_o0m0l"]
+[ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scenes/playableCharacter.gd" id="1_ydoa4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydoa4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hah1"]
+atlas = ExtResource("1_o0m0l")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adr3h"]
+atlas = ExtResource("1_o0m0l")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw8i6"]
+atlas = ExtResource("1_o0m0l")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nreci"]
+atlas = ExtResource("1_o0m0l")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc5ec"]
+atlas = ExtResource("1_o0m0l")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1amp"]
+atlas = ExtResource("1_o0m0l")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35y5p"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hah1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adr3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw8i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nreci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc5ec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1amp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="EdvinScene" type="Node2D"]
+
+[node name="playable_character" type="CharacterBody2D" parent="."]
+script = ExtResource("1_ydoa4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playable_character"]
+shape = SubResource("RectangleShape2D_ydoa4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="playable_character"]
+position = Vector2(0, 2)
+sprite_frames = SubResource("SpriteFrames_35y5p")
+animation = &"idle"
+frame_progress = 0.13731
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)
