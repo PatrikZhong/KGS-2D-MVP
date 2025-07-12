@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @onready var sprite = $OrcSprite
-var run_speed = 20
+var run_speed = 500
 enum state {
 	idle, 
 	walk, 

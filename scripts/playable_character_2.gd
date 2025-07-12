@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var sprite = $AnimatedSprite2D
 @onready var character_selector = get_node("../../character_selector")
 
-var speed = 100
+var speed = 500
 var click_position = Vector2()
 var target_position = Vector2()
 var currentState = state.idle
