@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8hpchknmr0xk"
-path="res://.godot/imported/DungeonCrawler_Example.png-2b2487b98e7064f18070a9593b866fd1.ctex"
+uid="uid://d3akqjh2mkf86"
+path="res://.godot/imported/Vibrance 1 copy 3.png-746dc15125c7085e81d0e6e39be88923.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/dungeonkit/DungeonCrawler_Example.png"
-dest_files=["res://.godot/imported/DungeonCrawler_Example.png-2b2487b98e7064f18070a9593b866fd1.ctex"]
+source_file="res://assets/Forest Pixel BackGround/Vibrance 1 copy 3.png"
+dest_files=["res://.godot/imported/Vibrance 1 copy 3.png-746dc15125c7085e81d0e6e39be88923.ctex"]
 
 [params]
 

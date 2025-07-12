@@ -1,0 +1,5 @@
+LICENSE: 
+This asset pack can be used in free and commercial projects.
+You can change the asset's colors as you want but you can not modify it. 
+Credit is not necessary but is always appreciated.  
+You may not repackage, redistribute or resell the assets, no matter how much they are modified
