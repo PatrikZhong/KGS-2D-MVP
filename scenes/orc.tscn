@@ -170,7 +170,6 @@ animations = [{
 position = Vector2(744, -217)
 scale = Vector2(5, 5)
 collision_layer = 7
-script = ExtResource("2_xme4o")
 
 [node name="OrcSprite" type="AnimatedSprite2D" parent="Base_Monster" index="3"]
 sprite_frames = SubResource("SpriteFrames_48uv6")
