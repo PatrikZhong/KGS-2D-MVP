@@ -1,3 +1,12 @@
-[gd_scene load_steps=0 format=3 uid="uid://ddsalsaug557r"]
+[gd_scene load_steps=2 format=3 uid="uid://ddsalsaug557r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bok77"]
 
 [node name="PatriksPlayground" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_bok77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
