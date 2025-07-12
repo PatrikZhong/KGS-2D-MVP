@@ -1,10 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://bibtng3knxu7t"]
+[gd_scene load_steps=22 format=3 uid="uid://ccxvlbc2ev4sg"]
 
 [ext_resource type="Script" uid="uid://daqo0uhsdmges" path="res://scripts/character_selector.gd" id="1_4jhyb"]
 [ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="2_pfea8"]
 [ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="3_uf15r"]
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="4_ltyrd"]
 [ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_px3lb"]
+[ext_resource type="Script" path="res://scripts/character_selector.gd" id="1_80rj2"]
+[ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="2_oiift"]
+[ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="3_yh610"]
+[ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="4_sg6do"]
+[ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_mmyk7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hah1"]
 atlas = ExtResource("3_uf15r")

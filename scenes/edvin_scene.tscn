@@ -1,11 +1,13 @@
 [gd_scene load_steps=32 format=3 uid="uid://p7rh7vy0mnyl"]
 
 [ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="1_o0m0l"]
-[ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="1_ydoa4"]
+[ext_resource type="Script" path="res://scenes/playableCharacter.gd" id="1_ydoa4"]
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="3_2hah1"]
 [ext_resource type="Texture2D" uid="uid://jgkp0lqi56w" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Attack01.png" id="3_bc5ec"]
 [ext_resource type="Script" uid="uid://daqo0uhsdmges" path="res://scripts/character_selector.gd" id="4_adr3h"]
 [ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_tw8i6"]
+[ext_resource type="Script" path="res://scripts/character_selector.gd" id="4_adr3h"]
+[ext_resource type="Script" path="res://scripts/playable_character_2.gd" id="5_tw8i6"]
 [ext_resource type="PackedScene" uid="uid://crvjqf1d0ed2t" path="res://scenes/base_monster_logic.tscn" id="6_nreci"]
 [ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="8_r1amp"]
 
