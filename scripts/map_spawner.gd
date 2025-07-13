@@ -15,7 +15,7 @@ func _on_timeout():
 
 func _on_zone_testsignal():
 	
-	if (Globals.done_collumns[-1] == 3):
+	if (Globals.done_collumns[-1] == Globals.max_layers[Globals.current_map]):
 		Globals.done_collumns = [0]
 		var next_map = Globals.next_maps[Globals.current_map].pick_random()
 		Globals.current_map = next_map
