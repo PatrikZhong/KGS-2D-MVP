@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://bhcxljtkxr00o"]
+[gd_scene load_steps=6 format=4 uid="uid://bhcxljtkxr00o"]
 
 [ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_7o58n"]
-[ext_resource type="PackedScene" path="res://scenes/door_zone.tscn" id="1_fvpig"]
+[ext_resource type="PackedScene" uid="uid://cg0nx84532m4k" path="res://scenes/door_zone.tscn" id="1_fvpig"]
+[ext_resource type="Script" uid="uid://2ym4mc6lxnol" path="res://scenes/spawnpoints.gd" id="3_m7r1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7o58n"]
 texture = ExtResource("1_7o58n")
@@ -85,3 +86,19 @@ polygon = PackedVector2Array(-18, 18, -79, 47, -119, 23, -159, 44, -132, 65, -80
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(243, -418)
 zoom = Vector2(0.33, 0.33)
+
+[node name="spawnpoints" type="Node2D" parent="."]
+position = Vector2(819, -1405)
+script = ExtResource("3_m7r1v")
+
+[node name="Area2D" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(-1329, 1411)
+
+[node name="Area2D2" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(92, 1258)
+
+[node name="Area2D3" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(-1108, 819)
+
+[node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(-741, 1132)

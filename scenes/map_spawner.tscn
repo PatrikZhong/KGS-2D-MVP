@@ -1,9 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6yuww1sjqi1e"]
+[gd_scene load_steps=3 format=3 uid="uid://c6yuww1sjqi1e"]
 
 [ext_resource type="Script" uid="uid://dnl0gixl1l7fm" path="res://scripts/map_spawner.gd" id="1_qgho1"]
-[ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="2_cymim"]
-[ext_resource type="PackedScene" uid="uid://b2kld6a17ejku" path="res://scenes/mapblock_2.tscn" id="3_0ky3k"]
+[ext_resource type="PackedScene" uid="uid://dwl7d1e1v033p" path="res://scenes/mapblock_3.tscn" id="2_in841"]
 
 [node name="map_spawner" type="Node2D"]
 script = ExtResource("1_qgho1")
-map_blocks = Array[PackedScene]([ExtResource("2_cymim"), ExtResource("3_0ky3k")])
+map_blocks = Array[PackedScene]([ExtResource("2_in841")])
