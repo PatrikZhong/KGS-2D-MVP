@@ -2,7 +2,7 @@ extends CharacterBody2D
 # Node references
 @onready var attack_range = get_node("InitiateAttack")
 @onready var chase_range = get_node("InitiateChase")
-@export var run_speed: float = 10
+@export var run_speed: float = 100
 @onready var sprite = get_node("OrcSprite")
 var health = 100
 @onready var hp_bar = $Label
