@@ -51,6 +51,14 @@ sources/1 = SubResource("TileSetAtlasSource_ixfrp")
 
 [node name="mapblock_loot" type="Node2D"]
 
+[node name="door_zones" type="Node2D" parent="."]
+
+[node name="door_zone" parent="door_zones" instance=ExtResource("2_iso3f")]
+top_level = true
+position = Vector2(1109, -291)
+rotation = 0.471239
+scale = Vector2(1.765, 1.765)
+
 [node name="tiles" type="Node2D" parent="."]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="tiles"]
@@ -72,13 +80,6 @@ tile_set = SubResource("TileSet_h5xbb")
 [node name="TileMapLayer5" type="TileMapLayer" parent="tiles"]
 tile_map_data = PackedByteArray("AAD///7/AQADAAcAAAABAPz/AQADAAcAAAACAP3/AQADAAcAAAAAAP7/AQADAAUAAAABAP7/AQAAAAcAAAD///3/AQACAAUAAAD+////AQAAAAcAAAD+//7/AQAAAAcAAAD///z/AQAAAAcAAAA=")
 tile_set = SubResource("TileSet_h5xbb")
-
-[node name="door_zones" type="Node2D" parent="."]
-
-[node name="door_zone" parent="." instance=ExtResource("2_iso3f")]
-position = Vector2(1109, -291)
-rotation = 0.471239
-scale = Vector2(1.765, 1.765)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -110,3 +111,7 @@ position = Vector2(261, 210)
 
 [node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
 position = Vector2(96, 129)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(641, -99)
+zoom = Vector2(0.605, 0.605)
