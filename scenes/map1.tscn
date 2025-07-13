@@ -1,20 +1,20 @@
 [gd_scene load_steps=9 format=3 uid="uid://ccvkjci3glqpo"]
 
-[ext_resource type="Script" uid="uid://cb5p5gmnuvrpg" path="res://scripts/map.gd" id="1_6lv4v"]
-[ext_resource type="Texture2D" uid="uid://dtxrsku6j1bjn" path="res://assets/backgrounds/wooden-floor-background.jpg" id="1_x7x3f"]
-[ext_resource type="Texture2D" uid="uid://c21i48mo6q5v4" path="res://assets/mapIcons/Medieval_door.png" id="3_ulj4p"]
-[ext_resource type="Texture2D" uid="uid://cs7tm1y8pup8l" path="res://assets/mapIcons/Medieval_door_open.png" id="4_oke2x"]
-[ext_resource type="Texture2D" uid="uid://cd8xfchm8si0q" path="res://assets/buttons/play_new.png" id="5_oke2x"]
-[ext_resource type="Texture2D" uid="uid://bk0ququqcl6wl" path="res://assets/mapIcons/ClassicRPG_path.png" id="6_hl6gy"]
+[ext_resource type="Script" uid="uid://cb5p5gmnuvrpg" path="res://scripts/map.gd" id="1_uyy6q"]
+[ext_resource type="Texture2D" uid="uid://dtxrsku6j1bjn" path="res://assets/backgrounds/wooden-floor-background.jpg" id="2_p7jwj"]
+[ext_resource type="Texture2D" uid="uid://c21i48mo6q5v4" path="res://assets/mapIcons/Medieval_door.png" id="3_2m3eu"]
+[ext_resource type="Texture2D" uid="uid://cs7tm1y8pup8l" path="res://assets/mapIcons/Medieval_door_open.png" id="4_raiux"]
+[ext_resource type="Texture2D" uid="uid://cd8xfchm8si0q" path="res://assets/buttons/play_new.png" id="5_5vo6v"]
+[ext_resource type="Texture2D" uid="uid://bk0ququqcl6wl" path="res://assets/mapIcons/ClassicRPG_path.png" id="6_k348l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oke2x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ulj4p")
+"texture": ExtResource("3_2m3eu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_oke2x")
+"texture": ExtResource("4_raiux")
 }],
 "loop": true,
 "name": &"default",
@@ -25,7 +25,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_oke2x")
+"texture": ExtResource("5_5vo6v")
 }],
 "loop": true,
 "name": &"default",
@@ -35,12 +35,12 @@ animations = [{
 [node name="playground" type="Node2D"]
 
 [node name="map" type="Node2D" parent="."]
-script = ExtResource("1_6lv4v")
+script = ExtResource("1_uyy6q")
 
 [node name="Wooden-floor-background" type="Sprite2D" parent="map"]
 position = Vector2(576, 322.5)
 scale = Vector2(0.576, 0.485371)
-texture = ExtResource("1_x7x3f")
+texture = ExtResource("2_p7jwj")
 
 [node name="level2" type="AnimatedSprite2D" parent="map"]
 position = Vector2(417, 197)
@@ -74,2060 +74,2060 @@ sprite_frames = SubResource("SpriteFrames_ulj4p")
 
 [node name="ClassicRpgPath" type="Sprite2D" parent="."]
 position = Vector2(175, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath2" type="Sprite2D" parent="."]
 position = Vector2(162, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath404" type="Sprite2D" parent="."]
 position = Vector2(160, 391)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath405" type="Sprite2D" parent="."]
 position = Vector2(150, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath406" type="Sprite2D" parent="."]
 position = Vector2(146, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath407" type="Sprite2D" parent="."]
 position = Vector2(157, 398)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath408" type="Sprite2D" parent="."]
 position = Vector2(139, 391)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath409" type="Sprite2D" parent="."]
 position = Vector2(135, 399)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath410" type="Sprite2D" parent="."]
 position = Vector2(128, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath411" type="Sprite2D" parent="."]
 position = Vector2(123, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath412" type="Sprite2D" parent="."]
 position = Vector2(123, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath413" type="Sprite2D" parent="."]
 position = Vector2(115, 389)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath414" type="Sprite2D" parent="."]
 position = Vector2(112, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath415" type="Sprite2D" parent="."]
 position = Vector2(106, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath416" type="Sprite2D" parent="."]
 position = Vector2(102, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath417" type="Sprite2D" parent="."]
 position = Vector2(102, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath418" type="Sprite2D" parent="."]
 position = Vector2(113, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath419" type="Sprite2D" parent="."]
 position = Vector2(121, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath420" type="Sprite2D" parent="."]
 position = Vector2(132, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath421" type="Sprite2D" parent="."]
 position = Vector2(140, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath422" type="Sprite2D" parent="."]
 position = Vector2(148, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath423" type="Sprite2D" parent="."]
 position = Vector2(98, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath424" type="Sprite2D" parent="."]
 position = Vector2(90, 391)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath425" type="Sprite2D" parent="."]
 position = Vector2(90, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath426" type="Sprite2D" parent="."]
 position = Vector2(86, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath427" type="Sprite2D" parent="."]
 position = Vector2(81, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath428" type="Sprite2D" parent="."]
 position = Vector2(80, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath429" type="Sprite2D" parent="."]
 position = Vector2(73, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath430" type="Sprite2D" parent="."]
 position = Vector2(71, 395)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath431" type="Sprite2D" parent="."]
 position = Vector2(67, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath432" type="Sprite2D" parent="."]
 position = Vector2(79, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath433" type="Sprite2D" parent="."]
 position = Vector2(91, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath434" type="Sprite2D" parent="."]
 position = Vector2(63, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath435" type="Sprite2D" parent="."]
 position = Vector2(63, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath436" type="Sprite2D" parent="."]
 position = Vector2(70, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath437" type="Sprite2D" parent="."]
 position = Vector2(56, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath438" type="Sprite2D" parent="."]
 position = Vector2(55, 380)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath439" type="Sprite2D" parent="."]
 position = Vector2(47, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath440" type="Sprite2D" parent="."]
 position = Vector2(51, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath441" type="Sprite2D" parent="."]
 position = Vector2(50, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath442" type="Sprite2D" parent="."]
 position = Vector2(41, 395)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath443" type="Sprite2D" parent="."]
 position = Vector2(37, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath444" type="Sprite2D" parent="."]
 position = Vector2(38, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath445" type="Sprite2D" parent="."]
 position = Vector2(24, 389)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath446" type="Sprite2D" parent="."]
 position = Vector2(29, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath447" type="Sprite2D" parent="."]
 position = Vector2(26, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath448" type="Sprite2D" parent="."]
 position = Vector2(31, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath449" type="Sprite2D" parent="."]
 position = Vector2(38, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath450" type="Sprite2D" parent="."]
 position = Vector2(45, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath451" type="Sprite2D" parent="."]
 position = Vector2(28, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath452" type="Sprite2D" parent="."]
 position = Vector2(18, 382)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath453" type="Sprite2D" parent="."]
 position = Vector2(11, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath454" type="Sprite2D" parent="."]
 position = Vector2(12, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath455" type="Sprite2D" parent="."]
 position = Vector2(10, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath456" type="Sprite2D" parent="."]
 position = Vector2(11, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath457" type="Sprite2D" parent="."]
 position = Vector2(11, 379)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath458" type="Sprite2D" parent="."]
 position = Vector2(8, 379)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath467" type="Sprite2D" parent="."]
 position = Vector2(3, 379)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath468" type="Sprite2D" parent="."]
 position = Vector2(2, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath469" type="Sprite2D" parent="."]
 position = Vector2(3, 396)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath470" type="Sprite2D" parent="."]
 position = Vector2(3, 396)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath459" type="Sprite2D" parent="."]
 position = Vector2(10, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath460" type="Sprite2D" parent="."]
 position = Vector2(17, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath461" type="Sprite2D" parent="."]
 position = Vector2(11, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath462" type="Sprite2D" parent="."]
 position = Vector2(4, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath471" type="Sprite2D" parent="."]
 position = Vector2(4, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath463" type="Sprite2D" parent="."]
 position = Vector2(19, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath464" type="Sprite2D" parent="."]
 position = Vector2(26, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath465" type="Sprite2D" parent="."]
 position = Vector2(41, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath466" type="Sprite2D" parent="."]
 position = Vector2(41, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath3" type="Sprite2D" parent="."]
 position = Vector2(188, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath4" type="Sprite2D" parent="."]
 position = Vector2(171, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath5" type="Sprite2D" parent="."]
 position = Vector2(184, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath6" type="Sprite2D" parent="."]
 position = Vector2(197, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath7" type="Sprite2D" parent="."]
 position = Vector2(192, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath8" type="Sprite2D" parent="."]
 position = Vector2(205, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath9" type="Sprite2D" parent="."]
 position = Vector2(210, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath10" type="Sprite2D" parent="."]
 position = Vector2(210, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath11" type="Sprite2D" parent="."]
 position = Vector2(218, 403)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath12" type="Sprite2D" parent="."]
 position = Vector2(223, 395)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath13" type="Sprite2D" parent="."]
 position = Vector2(223, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath14" type="Sprite2D" parent="."]
 position = Vector2(236, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath15" type="Sprite2D" parent="."]
 position = Vector2(236, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath16" type="Sprite2D" parent="."]
 position = Vector2(227, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath17" type="Sprite2D" parent="."]
 position = Vector2(241, 380)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath18" type="Sprite2D" parent="."]
 position = Vector2(231, 377)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath19" type="Sprite2D" parent="."]
 position = Vector2(242, 372)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath20" type="Sprite2D" parent="."]
 position = Vector2(233, 369)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath21" type="Sprite2D" parent="."]
 position = Vector2(245, 365)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath22" type="Sprite2D" parent="."]
 position = Vector2(234, 361)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath23" type="Sprite2D" parent="."]
 position = Vector2(232, 368)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath24" type="Sprite2D" parent="."]
 position = Vector2(246, 357)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath25" type="Sprite2D" parent="."]
 position = Vector2(239, 352)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath26" type="Sprite2D" parent="."]
 position = Vector2(252, 348)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath27" type="Sprite2D" parent="."]
 position = Vector2(244, 344)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath28" type="Sprite2D" parent="."]
 position = Vector2(257, 340)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath29" type="Sprite2D" parent="."]
 position = Vector2(262, 331)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath30" type="Sprite2D" parent="."]
 position = Vector2(254, 332)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath31" type="Sprite2D" parent="."]
 position = Vector2(249, 337)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath32" type="Sprite2D" parent="."]
 position = Vector2(256, 324)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath33" type="Sprite2D" parent="."]
 position = Vector2(268, 322)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath34" type="Sprite2D" parent="."]
 position = Vector2(275, 330)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath35" type="Sprite2D" parent="."]
 position = Vector2(280, 323)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath36" type="Sprite2D" parent="."]
 position = Vector2(269, 337)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath37" type="Sprite2D" parent="."]
 position = Vector2(281, 334)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath38" type="Sprite2D" parent="."]
 position = Vector2(288, 329)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath39" type="Sprite2D" parent="."]
 position = Vector2(291, 322)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath40" type="Sprite2D" parent="."]
 position = Vector2(280, 315)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath41" type="Sprite2D" parent="."]
 position = Vector2(293, 314)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath42" type="Sprite2D" parent="."]
 position = Vector2(288, 307)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath43" type="Sprite2D" parent="."]
 position = Vector2(301, 308)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath44" type="Sprite2D" parent="."]
 position = Vector2(301, 301)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath45" type="Sprite2D" parent="."]
 position = Vector2(293, 301)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath46" type="Sprite2D" parent="."]
 position = Vector2(300, 293)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath47" type="Sprite2D" parent="."]
 position = Vector2(312, 294)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath48" type="Sprite2D" parent="."]
 position = Vector2(312, 302)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath49" type="Sprite2D" parent="."]
 position = Vector2(313, 309)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath50" type="Sprite2D" parent="."]
 position = Vector2(323, 291)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath51" type="Sprite2D" parent="."]
 position = Vector2(334, 284)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath52" type="Sprite2D" parent="."]
 position = Vector2(345, 277)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath53" type="Sprite2D" parent="."]
 position = Vector2(357, 273)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath54" type="Sprite2D" parent="."]
 position = Vector2(369, 276)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath55" type="Sprite2D" parent="."]
 position = Vector2(381, 268)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath56" type="Sprite2D" parent="."]
 position = Vector2(392, 269)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath57" type="Sprite2D" parent="."]
 position = Vector2(393, 261)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath58" type="Sprite2D" parent="."]
 position = Vector2(404, 255)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath59" type="Sprite2D" parent="."]
 position = Vector2(404, 245)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath60" type="Sprite2D" parent="."]
 position = Vector2(404, 239)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath61" type="Sprite2D" parent="."]
 position = Vector2(417, 239)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath62" type="Sprite2D" parent="."]
 position = Vector2(430, 239)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath63" type="Sprite2D" parent="."]
 position = Vector2(428, 249)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath64" type="Sprite2D" parent="."]
 position = Vector2(416, 249)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath65" type="Sprite2D" parent="."]
 position = Vector2(424, 259)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath66" type="Sprite2D" parent="."]
 position = Vector2(414, 258)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath67" type="Sprite2D" parent="."]
 position = Vector2(404, 264)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath68" type="Sprite2D" parent="."]
 position = Vector2(416, 265)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath69" type="Sprite2D" parent="."]
 position = Vector2(402, 273)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath70" type="Sprite2D" parent="."]
 position = Vector2(413, 272)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath71" type="Sprite2D" parent="."]
 position = Vector2(392, 278)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath72" type="Sprite2D" parent="."]
 position = Vector2(380, 277)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath73" type="Sprite2D" parent="."]
 position = Vector2(381, 285)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath74" type="Sprite2D" parent="."]
 position = Vector2(368, 286)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath75" type="Sprite2D" parent="."]
 position = Vector2(357, 283)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath76" type="Sprite2D" parent="."]
 position = Vector2(356, 289)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath77" type="Sprite2D" parent="."]
 position = Vector2(346, 286)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath78" type="Sprite2D" parent="."]
 position = Vector2(345, 293)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath79" type="Sprite2D" parent="."]
 position = Vector2(334, 293)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath80" type="Sprite2D" parent="."]
 position = Vector2(322, 300)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath81" type="Sprite2D" parent="."]
 position = Vector2(332, 301)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath82" type="Sprite2D" parent="."]
 position = Vector2(343, 301)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath83" type="Sprite2D" parent="."]
 position = Vector2(324, 309)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath84" type="Sprite2D" parent="."]
 position = Vector2(335, 307)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath85" type="Sprite2D" parent="."]
 position = Vector2(353, 296)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath86" type="Sprite2D" parent="."]
 position = Vector2(366, 295)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath87" type="Sprite2D" parent="."]
 position = Vector2(377, 294)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath88" type="Sprite2D" parent="."]
 position = Vector2(300, 315)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath89" type="Sprite2D" parent="."]
 position = Vector2(391, 287)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath90" type="Sprite2D" parent="."]
 position = Vector2(404, 282)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath91" type="Sprite2D" parent="."]
 position = Vector2(369, 271)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath92" type="Sprite2D" parent="."]
 position = Vector2(267, 347)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath93" type="Sprite2D" parent="."]
 position = Vector2(259, 349)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath94" type="Sprite2D" parent="."]
 position = Vector2(271, 354)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath95" type="Sprite2D" parent="."]
 position = Vector2(277, 364)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath96" type="Sprite2D" parent="."]
 position = Vector2(275, 373)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath97" type="Sprite2D" parent="."]
 position = Vector2(280, 380)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath98" type="Sprite2D" parent="."]
 position = Vector2(285, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath99" type="Sprite2D" parent="."]
 position = Vector2(285, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath100" type="Sprite2D" parent="."]
 position = Vector2(290, 407)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath101" type="Sprite2D" parent="."]
 position = Vector2(292, 417)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath102" type="Sprite2D" parent="."]
 position = Vector2(295, 426)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath103" type="Sprite2D" parent="."]
 position = Vector2(291, 433)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath104" type="Sprite2D" parent="."]
 position = Vector2(298, 440)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath105" type="Sprite2D" parent="."]
 position = Vector2(303, 450)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath106" type="Sprite2D" parent="."]
 position = Vector2(310, 459)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath107" type="Sprite2D" parent="."]
 position = Vector2(311, 466)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath108" type="Sprite2D" parent="."]
 position = Vector2(316, 475)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath109" type="Sprite2D" parent="."]
 position = Vector2(323, 485)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath110" type="Sprite2D" parent="."]
 position = Vector2(328, 494)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath111" type="Sprite2D" parent="."]
 position = Vector2(335, 505)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath112" type="Sprite2D" parent="."]
 position = Vector2(336, 503)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath113" type="Sprite2D" parent="."]
 position = Vector2(343, 512)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath114" type="Sprite2D" parent="."]
 position = Vector2(350, 520)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath115" type="Sprite2D" parent="."]
 position = Vector2(357, 525)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath116" type="Sprite2D" parent="."]
 position = Vector2(368, 528)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath117" type="Sprite2D" parent="."]
 position = Vector2(380, 529)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath118" type="Sprite2D" parent="."]
 position = Vector2(392, 532)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath119" type="Sprite2D" parent="."]
 position = Vector2(404, 530)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath120" type="Sprite2D" parent="."]
 position = Vector2(412, 526)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath121" type="Sprite2D" parent="."]
 position = Vector2(423, 520)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath122" type="Sprite2D" parent="."]
 position = Vector2(424, 514)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath123" type="Sprite2D" parent="."]
 position = Vector2(427, 509)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath124" type="Sprite2D" parent="."]
 position = Vector2(440, 509)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath125" type="Sprite2D" parent="."]
 position = Vector2(453, 509)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath126" type="Sprite2D" parent="."]
 position = Vector2(449, 516)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath127" type="Sprite2D" parent="."]
 position = Vector2(449, 522)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath128" type="Sprite2D" parent="."]
 position = Vector2(438, 523)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath129" type="Sprite2D" parent="."]
 position = Vector2(438, 517)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath130" type="Sprite2D" parent="."]
 position = Vector2(432, 519)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath131" type="Sprite2D" parent="."]
 position = Vector2(429, 528)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath132" type="Sprite2D" parent="."]
 position = Vector2(421, 529)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath133" type="Sprite2D" parent="."]
 position = Vector2(439, 531)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath134" type="Sprite2D" parent="."]
 position = Vector2(414, 520)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath135" type="Sprite2D" parent="."]
 position = Vector2(411, 535)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath136" type="Sprite2D" parent="."]
 position = Vector2(427, 535)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath137" type="Sprite2D" parent="."]
 position = Vector2(414, 537)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath138" type="Sprite2D" parent="."]
 position = Vector2(398, 540)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath139" type="Sprite2D" parent="."]
 position = Vector2(385, 540)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath140" type="Sprite2D" parent="."]
 position = Vector2(409, 544)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath141" type="Sprite2D" parent="."]
 position = Vector2(385, 539)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath142" type="Sprite2D" parent="."]
 position = Vector2(371, 538)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath143" type="Sprite2D" parent="."]
 position = Vector2(375, 537)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath144" type="Sprite2D" parent="."]
 position = Vector2(377, 545)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath145" type="Sprite2D" parent="."]
 position = Vector2(385, 548)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath146" type="Sprite2D" parent="."]
 position = Vector2(397, 547)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath147" type="Sprite2D" parent="."]
 position = Vector2(364, 537)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath148" type="Sprite2D" parent="."]
 position = Vector2(357, 533)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath149" type="Sprite2D" parent="."]
 position = Vector2(369, 544)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath150" type="Sprite2D" parent="."]
 position = Vector2(356, 539)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath151" type="Sprite2D" parent="."]
 position = Vector2(347, 530)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath152" type="Sprite2D" parent="."]
 position = Vector2(349, 537)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath153" type="Sprite2D" parent="."]
 position = Vector2(342, 521)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath154" type="Sprite2D" parent="."]
 position = Vector2(338, 514)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath155" type="Sprite2D" parent="."]
 position = Vector2(333, 521)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath156" type="Sprite2D" parent="."]
 position = Vector2(339, 528)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath157" type="Sprite2D" parent="."]
 position = Vector2(328, 512)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath158" type="Sprite2D" parent="."]
 position = Vector2(325, 505)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath159" type="Sprite2D" parent="."]
 position = Vector2(322, 500)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath160" type="Sprite2D" parent="."]
 position = Vector2(318, 494)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath161" type="Sprite2D" parent="."]
 position = Vector2(314, 503)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath162" type="Sprite2D" parent="."]
 position = Vector2(309, 495)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath163" type="Sprite2D" parent="."]
 position = Vector2(313, 488)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath164" type="Sprite2D" parent="."]
 position = Vector2(314, 484)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath165" type="Sprite2D" parent="."]
 position = Vector2(307, 490)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath166" type="Sprite2D" parent="."]
 position = Vector2(307, 482)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath167" type="Sprite2D" parent="."]
 position = Vector2(306, 477)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath168" type="Sprite2D" parent="."]
 position = Vector2(305, 473)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath169" type="Sprite2D" parent="."]
 position = Vector2(300, 467)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath170" type="Sprite2D" parent="."]
 position = Vector2(299, 463)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath171" type="Sprite2D" parent="."]
 position = Vector2(300, 457)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath172" type="Sprite2D" parent="."]
 position = Vector2(292, 448)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath173" type="Sprite2D" parent="."]
 position = Vector2(289, 455)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath174" type="Sprite2D" parent="."]
 position = Vector2(289, 442)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath175" type="Sprite2D" parent="."]
 position = Vector2(286, 447)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath176" type="Sprite2D" parent="."]
 position = Vector2(286, 436)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath177" type="Sprite2D" parent="."]
 position = Vector2(285, 428)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath178" type="Sprite2D" parent="."]
 position = Vector2(285, 422)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath179" type="Sprite2D" parent="."]
 position = Vector2(282, 440)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath180" type="Sprite2D" parent="."]
 position = Vector2(282, 417)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath181" type="Sprite2D" parent="."]
 position = Vector2(279, 409)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath182" type="Sprite2D" parent="."]
 position = Vector2(276, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath183" type="Sprite2D" parent="."]
 position = Vector2(275, 395)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath184" type="Sprite2D" parent="."]
 position = Vector2(275, 389)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath185" type="Sprite2D" parent="."]
 position = Vector2(270, 382)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath186" type="Sprite2D" parent="."]
 position = Vector2(268, 373)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath187" type="Sprite2D" parent="."]
 position = Vector2(267, 364)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath188" type="Sprite2D" parent="."]
 position = Vector2(262, 358)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath189" type="Sprite2D" parent="."]
 position = Vector2(271, 347)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath190" type="Sprite2D" parent="."]
 position = Vector2(436, 259)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath191" type="Sprite2D" parent="."]
 position = Vector2(438, 251)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath192" type="Sprite2D" parent="."]
 position = Vector2(443, 261)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath193" type="Sprite2D" parent="."]
 position = Vector2(450, 268)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath194" type="Sprite2D" parent="."]
 position = Vector2(456, 275)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath195" type="Sprite2D" parent="."]
 position = Vector2(462, 286)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath196" type="Sprite2D" parent="."]
 position = Vector2(460, 280)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath197" type="Sprite2D" parent="."]
 position = Vector2(468, 295)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath198" type="Sprite2D" parent="."]
 position = Vector2(476, 305)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath199" type="Sprite2D" parent="."]
 position = Vector2(481, 314)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath200" type="Sprite2D" parent="."]
 position = Vector2(488, 323)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath201" type="Sprite2D" parent="."]
 position = Vector2(493, 333)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath202" type="Sprite2D" parent="."]
 position = Vector2(499, 343)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath203" type="Sprite2D" parent="."]
 position = Vector2(505, 351)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath204" type="Sprite2D" parent="."]
 position = Vector2(512, 359)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath205" type="Sprite2D" parent="."]
 position = Vector2(519, 368)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath206" type="Sprite2D" parent="."]
 position = Vector2(525, 378)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath207" type="Sprite2D" parent="."]
 position = Vector2(531, 386)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath208" type="Sprite2D" parent="."]
 position = Vector2(538, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath209" type="Sprite2D" parent="."]
 position = Vector2(545, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath210" type="Sprite2D" parent="."]
 position = Vector2(554, 403)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath211" type="Sprite2D" parent="."]
 position = Vector2(565, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath212" type="Sprite2D" parent="."]
 position = Vector2(576, 406)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath213" type="Sprite2D" parent="."]
 position = Vector2(587, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath214" type="Sprite2D" parent="."]
 position = Vector2(600, 408)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath215" type="Sprite2D" parent="."]
 position = Vector2(609, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath216" type="Sprite2D" parent="."]
 position = Vector2(622, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath217" type="Sprite2D" parent="."]
 position = Vector2(634, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath218" type="Sprite2D" parent="."]
 position = Vector2(646, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath219" type="Sprite2D" parent="."]
 position = Vector2(654, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath220" type="Sprite2D" parent="."]
 position = Vector2(657, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath221" type="Sprite2D" parent="."]
 position = Vector2(657, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath222" type="Sprite2D" parent="."]
 position = Vector2(657, 376)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath223" type="Sprite2D" parent="."]
 position = Vector2(670, 376)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath224" type="Sprite2D" parent="."]
 position = Vector2(680, 376)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath225" type="Sprite2D" parent="."]
 position = Vector2(666, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath226" type="Sprite2D" parent="."]
 position = Vector2(674, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath227" type="Sprite2D" parent="."]
 position = Vector2(665, 395)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath228" type="Sprite2D" parent="."]
 position = Vector2(672, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath229" type="Sprite2D" parent="."]
 position = Vector2(656, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath230" type="Sprite2D" parent="."]
 position = Vector2(667, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath231" type="Sprite2D" parent="."]
 position = Vector2(674, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath232" type="Sprite2D" parent="."]
 position = Vector2(676, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath233" type="Sprite2D" parent="."]
 position = Vector2(678, 386)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath234" type="Sprite2D" parent="."]
 position = Vector2(655, 409)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath235" type="Sprite2D" parent="."]
 position = Vector2(645, 410)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath236" type="Sprite2D" parent="."]
 position = Vector2(636, 413)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath237" type="Sprite2D" parent="."]
 position = Vector2(625, 411)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath238" type="Sprite2D" parent="."]
 position = Vector2(627, 417)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath239" type="Sprite2D" parent="."]
 position = Vector2(619, 411)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath240" type="Sprite2D" parent="."]
 position = Vector2(619, 418)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath241" type="Sprite2D" parent="."]
 position = Vector2(611, 411)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath242" type="Sprite2D" parent="."]
 position = Vector2(610, 418)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath243" type="Sprite2D" parent="."]
 position = Vector2(602, 416)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath244" type="Sprite2D" parent="."]
 position = Vector2(599, 423)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath245" type="Sprite2D" parent="."]
 position = Vector2(592, 411)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath246" type="Sprite2D" parent="."]
 position = Vector2(585, 411)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath247" type="Sprite2D" parent="."]
 position = Vector2(594, 419)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath248" type="Sprite2D" parent="."]
 position = Vector2(583, 419)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath249" type="Sprite2D" parent="."]
 position = Vector2(589, 427)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath250" type="Sprite2D" parent="."]
 position = Vector2(578, 427)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath251" type="Sprite2D" parent="."]
 position = Vector2(568, 433)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath252" type="Sprite2D" parent="."]
 position = Vector2(559, 440)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath253" type="Sprite2D" parent="."]
 position = Vector2(552, 447)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath254" type="Sprite2D" parent="."]
 position = Vector2(545, 455)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath255" type="Sprite2D" parent="."]
 position = Vector2(540, 462)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath256" type="Sprite2D" parent="."]
 position = Vector2(536, 470)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath257" type="Sprite2D" parent="."]
 position = Vector2(532, 480)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath258" type="Sprite2D" parent="."]
 position = Vector2(464, 511)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath259" type="Sprite2D" parent="."]
 position = Vector2(460, 518)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath260" type="Sprite2D" parent="."]
 position = Vector2(471, 522)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath261" type="Sprite2D" parent="."]
 position = Vector2(470, 517)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath262" type="Sprite2D" parent="."]
 position = Vector2(475, 512)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath263" type="Sprite2D" parent="."]
 position = Vector2(481, 522)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath264" type="Sprite2D" parent="."]
 position = Vector2(487, 523)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath265" type="Sprite2D" parent="."]
 position = Vector2(484, 515)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath266" type="Sprite2D" parent="."]
 position = Vector2(489, 510)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath267" type="Sprite2D" parent="."]
 position = Vector2(498, 503)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath268" type="Sprite2D" parent="."]
 position = Vector2(490, 514)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath269" type="Sprite2D" parent="."]
 position = Vector2(493, 509)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath270" type="Sprite2D" parent="."]
 position = Vector2(493, 501)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath271" type="Sprite2D" parent="."]
 position = Vector2(498, 496)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath272" type="Sprite2D" parent="."]
 position = Vector2(504, 488)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath273" type="Sprite2D" parent="."]
 position = Vector2(515, 488)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath274" type="Sprite2D" parent="."]
 position = Vector2(526, 488)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath275" type="Sprite2D" parent="."]
 position = Vector2(505, 497)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath276" type="Sprite2D" parent="."]
 position = Vector2(518, 496)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath277" type="Sprite2D" parent="."]
 position = Vector2(522, 480)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath278" type="Sprite2D" parent="."]
 position = Vector2(511, 480)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath279" type="Sprite2D" parent="."]
 position = Vector2(526, 473)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath280" type="Sprite2D" parent="."]
 position = Vector2(480, 511)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath281" type="Sprite2D" parent="."]
 position = Vector2(537, 456)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath282" type="Sprite2D" parent="."]
 position = Vector2(531, 464)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath283" type="Sprite2D" parent="."]
 position = Vector2(543, 448)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath284" type="Sprite2D" parent="."]
 position = Vector2(548, 440)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath285" type="Sprite2D" parent="."]
 position = Vector2(559, 434)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath286" type="Sprite2D" parent="."]
 position = Vector2(568, 425)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath287" type="Sprite2D" parent="."]
 position = Vector2(576, 418)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath288" type="Sprite2D" parent="."]
 position = Vector2(576, 412)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath289" type="Sprite2D" parent="."]
 position = Vector2(562, 427)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath290" type="Sprite2D" parent="."]
 position = Vector2(567, 410)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath291" type="Sprite2D" parent="."]
 position = Vector2(567, 416)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath292" type="Sprite2D" parent="."]
 position = Vector2(556, 410)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath293" type="Sprite2D" parent="."]
 position = Vector2(545, 407)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath294" type="Sprite2D" parent="."]
 position = Vector2(552, 412)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath295" type="Sprite2D" parent="."]
 position = Vector2(539, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath296" type="Sprite2D" parent="."]
 position = Vector2(530, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath297" type="Sprite2D" parent="."]
 position = Vector2(528, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath298" type="Sprite2D" parent="."]
 position = Vector2(521, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath299" type="Sprite2D" parent="."]
 position = Vector2(520, 395)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath300" type="Sprite2D" parent="."]
 position = Vector2(517, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath301" type="Sprite2D" parent="."]
 position = Vector2(516, 377)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath302" type="Sprite2D" parent="."]
 position = Vector2(509, 374)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath303" type="Sprite2D" parent="."]
 position = Vector2(510, 368)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath304" type="Sprite2D" parent="."]
 position = Vector2(502, 368)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath305" type="Sprite2D" parent="."]
 position = Vector2(502, 360)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath306" type="Sprite2D" parent="."]
 position = Vector2(493, 359)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath307" type="Sprite2D" parent="."]
 position = Vector2(493, 352)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath308" type="Sprite2D" parent="."]
 position = Vector2(487, 346)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath309" type="Sprite2D" parent="."]
 position = Vector2(487, 339)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath310" type="Sprite2D" parent="."]
 position = Vector2(483, 333)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath311" type="Sprite2D" parent="."]
 position = Vector2(477, 329)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath312" type="Sprite2D" parent="."]
 position = Vector2(477, 321)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath313" type="Sprite2D" parent="."]
 position = Vector2(471, 315)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath314" type="Sprite2D" parent="."]
 position = Vector2(467, 308)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath315" type="Sprite2D" parent="."]
 position = Vector2(463, 302)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath316" type="Sprite2D" parent="."]
 position = Vector2(457, 297)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath317" type="Sprite2D" parent="."]
 position = Vector2(455, 293)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath318" type="Sprite2D" parent="."]
 position = Vector2(450, 286)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath319" type="Sprite2D" parent="."]
 position = Vector2(445, 279)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath320" type="Sprite2D" parent="."]
 position = Vector2(443, 274)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath321" type="Sprite2D" parent="."]
 position = Vector2(435, 269)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath322" type="Sprite2D" parent="."]
 position = Vector2(456, 283)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath323" type="Sprite2D" parent="."]
 position = Vector2(441, 270)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath324" type="Sprite2D" parent="."]
 position = Vector2(431, 265)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath325" type="Sprite2D" parent="."]
 position = Vector2(459, 312)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath326" type="Sprite2D" parent="."]
 position = Vector2(456, 304)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath327" type="Sprite2D" parent="."]
 position = Vector2(456, 302)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath328" type="Sprite2D" parent="."]
 position = Vector2(470, 322)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath329" type="Sprite2D" parent="."]
 position = Vector2(465, 322)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath330" type="Sprite2D" parent="."]
 position = Vector2(469, 327)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath331" type="Sprite2D" parent="."]
 position = Vector2(563, 418)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath332" type="Sprite2D" parent="."]
 position = Vector2(483, 342)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath333" type="Sprite2D" parent="."]
 position = Vector2(692, 389)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath334" type="Sprite2D" parent="."]
 position = Vector2(687, 386)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath335" type="Sprite2D" parent="."]
 position = Vector2(697, 384)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath336" type="Sprite2D" parent="."]
 position = Vector2(704, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath337" type="Sprite2D" parent="."]
 position = Vector2(687, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath338" type="Sprite2D" parent="."]
 position = Vector2(693, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath339" type="Sprite2D" parent="."]
 position = Vector2(708, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath340" type="Sprite2D" parent="."]
 position = Vector2(714, 396)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath341" type="Sprite2D" parent="."]
 position = Vector2(705, 399)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath342" type="Sprite2D" parent="."]
 position = Vector2(715, 388)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath343" type="Sprite2D" parent="."]
 position = Vector2(710, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath344" type="Sprite2D" parent="."]
 position = Vector2(721, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath345" type="Sprite2D" parent="."]
 position = Vector2(724, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath346" type="Sprite2D" parent="."]
 position = Vector2(722, 389)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath347" type="Sprite2D" parent="."]
 position = Vector2(723, 399)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath348" type="Sprite2D" parent="."]
 position = Vector2(730, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath349" type="Sprite2D" parent="."]
 position = Vector2(733, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath350" type="Sprite2D" parent="."]
 position = Vector2(737, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath351" type="Sprite2D" parent="."]
 position = Vector2(745, 396)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath352" type="Sprite2D" parent="."]
 position = Vector2(741, 388)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath353" type="Sprite2D" parent="."]
 position = Vector2(735, 396)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath354" type="Sprite2D" parent="."]
 position = Vector2(744, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath355" type="Sprite2D" parent="."]
 position = Vector2(753, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath356" type="Sprite2D" parent="."]
 position = Vector2(756, 398)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath357" type="Sprite2D" parent="."]
 position = Vector2(766, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath358" type="Sprite2D" parent="."]
 position = Vector2(767, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath359" type="Sprite2D" parent="."]
 position = Vector2(777, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath360" type="Sprite2D" parent="."]
 position = Vector2(777, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath361" type="Sprite2D" parent="."]
 position = Vector2(785, 398)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath362" type="Sprite2D" parent="."]
 position = Vector2(789, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath363" type="Sprite2D" parent="."]
 position = Vector2(795, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath364" type="Sprite2D" parent="."]
 position = Vector2(800, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath365" type="Sprite2D" parent="."]
 position = Vector2(807, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath366" type="Sprite2D" parent="."]
 position = Vector2(810, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath367" type="Sprite2D" parent="."]
 position = Vector2(811, 398)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath368" type="Sprite2D" parent="."]
 position = Vector2(819, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath369" type="Sprite2D" parent="."]
 position = Vector2(821, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath370" type="Sprite2D" parent="."]
 position = Vector2(827, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath371" type="Sprite2D" parent="."]
 position = Vector2(830, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath372" type="Sprite2D" parent="."]
 position = Vector2(836, 408)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath373" type="Sprite2D" parent="."]
 position = Vector2(838, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath374" type="Sprite2D" parent="."]
 position = Vector2(847, 411)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath375" type="Sprite2D" parent="."]
 position = Vector2(847, 403)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath376" type="Sprite2D" parent="."]
 position = Vector2(857, 413)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath377" type="Sprite2D" parent="."]
 position = Vector2(858, 406)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath378" type="Sprite2D" parent="."]
 position = Vector2(869, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath379" type="Sprite2D" parent="."]
 position = Vector2(870, 413)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath380" type="Sprite2D" parent="."]
 position = Vector2(877, 403)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath381" type="Sprite2D" parent="."]
 position = Vector2(882, 410)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath382" type="Sprite2D" parent="."]
 position = Vector2(890, 403)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath383" type="Sprite2D" parent="."]
 position = Vector2(894, 410)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath384" type="Sprite2D" parent="."]
 position = Vector2(887, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath385" type="Sprite2D" parent="."]
 position = Vector2(900, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath386" type="Sprite2D" parent="."]
 position = Vector2(907, 410)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath387" type="Sprite2D" parent="."]
 position = Vector2(911, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath388" type="Sprite2D" parent="."]
 position = Vector2(921, 399)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath389" type="Sprite2D" parent="."]
 position = Vector2(920, 408)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath390" type="Sprite2D" parent="."]
 position = Vector2(930, 407)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath391" type="Sprite2D" parent="."]
 position = Vector2(932, 398)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath392" type="Sprite2D" parent="."]
 position = Vector2(937, 391)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath393" type="Sprite2D" parent="."]
 position = Vector2(943, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath394" type="Sprite2D" parent="."]
 position = Vector2(949, 391)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath395" type="Sprite2D" parent="."]
 position = Vector2(937, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath396" type="Sprite2D" parent="."]
 position = Vector2(950, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath397" type="Sprite2D" parent="."]
 position = Vector2(959, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath472" type="Sprite2D" parent="."]
 position = Vector2(970, 389)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath473" type="Sprite2D" parent="."]
 position = Vector2(970, 398)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath474" type="Sprite2D" parent="."]
 position = Vector2(964, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath475" type="Sprite2D" parent="."]
 position = Vector2(974, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath476" type="Sprite2D" parent="."]
 position = Vector2(978, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath477" type="Sprite2D" parent="."]
 position = Vector2(981, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath478" type="Sprite2D" parent="."]
 position = Vector2(987, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath479" type="Sprite2D" parent="."]
 position = Vector2(994, 399)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath480" type="Sprite2D" parent="."]
 position = Vector2(999, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath481" type="Sprite2D" parent="."]
 position = Vector2(1003, 399)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath482" type="Sprite2D" parent="."]
 position = Vector2(1009, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath483" type="Sprite2D" parent="."]
 position = Vector2(1017, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath484" type="Sprite2D" parent="."]
 position = Vector2(1020, 397)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath485" type="Sprite2D" parent="."]
 position = Vector2(1011, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath486" type="Sprite2D" parent="."]
 position = Vector2(1014, 401)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath487" type="Sprite2D" parent="."]
 position = Vector2(1028, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath488" type="Sprite2D" parent="."]
 position = Vector2(1036, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath489" type="Sprite2D" parent="."]
 position = Vector2(1038, 395)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath490" type="Sprite2D" parent="."]
 position = Vector2(1047, 386)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath491" type="Sprite2D" parent="."]
 position = Vector2(1049, 393)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath492" type="Sprite2D" parent="."]
 position = Vector2(1056, 385)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath493" type="Sprite2D" parent="."]
 position = Vector2(1066, 381)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath494" type="Sprite2D" parent="."]
 position = Vector2(1061, 392)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath495" type="Sprite2D" parent="."]
 position = Vector2(1067, 386)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath496" type="Sprite2D" parent="."]
 position = Vector2(1074, 377)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath497" type="Sprite2D" parent="."]
 position = Vector2(1074, 383)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath498" type="Sprite2D" parent="."]
 position = Vector2(1083, 378)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath499" type="Sprite2D" parent="."]
 position = Vector2(1085, 384)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath500" type="Sprite2D" parent="."]
 position = Vector2(1093, 387)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath501" type="Sprite2D" parent="."]
 position = Vector2(1103, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath502" type="Sprite2D" parent="."]
 position = Vector2(1109, 396)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath503" type="Sprite2D" parent="."]
 position = Vector2(1116, 402)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath504" type="Sprite2D" parent="."]
 position = Vector2(1122, 396)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath505" type="Sprite2D" parent="."]
 position = Vector2(1111, 390)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath506" type="Sprite2D" parent="."]
 position = Vector2(1101, 382)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath507" type="Sprite2D" parent="."]
 position = Vector2(1094, 382)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath508" type="Sprite2D" parent="."]
 position = Vector2(1127, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath509" type="Sprite2D" parent="."]
 position = Vector2(1133, 410)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath510" type="Sprite2D" parent="."]
 position = Vector2(1134, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath511" type="Sprite2D" parent="."]
 position = Vector2(1140, 412)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath512" type="Sprite2D" parent="."]
 position = Vector2(1143, 403)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath513" type="Sprite2D" parent="."]
 position = Vector2(1147, 411)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath514" type="Sprite2D" parent="."]
 position = Vector2(1149, 404)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath515" type="Sprite2D" parent="."]
 position = Vector2(1138, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath398" type="Sprite2D" parent="."]
 position = Vector2(960, 394)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath399" type="Sprite2D" parent="."]
 position = Vector2(956, 400)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath400" type="Sprite2D" parent="."]
 position = Vector2(943, 405)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath401" type="Sprite2D" parent="."]
 position = Vector2(882, 413)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath402" type="Sprite2D" parent="."]
 position = Vector2(901, 412)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")
 
 [node name="ClassicRpgPath403" type="Sprite2D" parent="."]
 position = Vector2(888, 413)
-texture = ExtResource("6_hl6gy")
+texture = ExtResource("6_k348l")

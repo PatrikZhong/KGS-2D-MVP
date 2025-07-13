@@ -14,9 +14,16 @@ func _on_timeout():
 	timer.stop()
 
 func _on_zone_testsignal():
-	Globals.done_collumns.append(Globals.done_collumns[-1] + 1)
+	
+	if (Globals.done_collumns[-1] == 3):
+		Globals.done_collumns = [0]
+		var next_map = Globals.next_maps[Globals.current_map].pick_random()
+		Globals.current_map = next_map
+		get_tree().change_scene_to_file("res://scenes/" + next_map + ".tscn")
+	else:
+		Globals.done_collumns.append(Globals.done_collumns[-1] + 1)
 
-	get_tree().change_scene_to_file("res://scenes/rasmus_playground.tscn")
+		get_tree().change_scene_to_file("res://scenes/" + Globals.current_map + ".tscn")
 	
 		
 func spawn_new_map():
