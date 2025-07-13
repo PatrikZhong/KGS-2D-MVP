@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dojfna86wwb2a"]
+[gd_scene load_steps=30 format=3 uid="uid://cp54pqxhb2bia"]
 
 [ext_resource type="Script" path="res://scripts/character_selector.gd" id="1_4jhyb"]
 [ext_resource type="Script" uid="uid://clfrob1cnoli1" path="res://scripts/playable_character_1.gd" id="2_pfea8"]
