@@ -21,14 +21,14 @@ enum state {
 	death
 }
 
+
 func take_damage(damage: int):
 	health = health - damage
 	hp_bar.text = str(health)
 
-	if health < 0:
+	if health <= 0:
 		updateAnimation(state.death)
 		queue_free()
-	
 
 func _ready():
 	updateAnimation(current_state)
@@ -46,6 +46,7 @@ func updateAnimation(input: state):
 			sprite.play("death")
 	
 func _physics_process(delta):
+	
 	updateAnimation(current_state)
 	
 	if Input.is_action_just_pressed("left_mouse"):
@@ -57,20 +58,26 @@ func _physics_process(delta):
 		velocity = target_position * speed
 		updateAnimation(state.walk)
 		move_and_slide()
-		
 		if velocity.x < 0:
 			sprite.flip_h = true
 		elif velocity.x > 0:
 			sprite.flip_h = false
-			
 	elif current_state != state.attack:
 		updateAnimation(state.idle)
 		
 	if attack_range.has_overlapping_bodies():
 		updateAnimation(state.attack)
+		if can_attack:
+			can_attack = false
+			attack_timer.start()
+			for i in attack_range.get_overlapping_bodies():
+				i.take_damage(10)
 	elif current_state != state.walk:
 		updateAnimation(state.idle)
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_just_pressed("left_mouse"):
 		print("selected this unit lol")
+
+func _on_timer_timeout() -> void:
+	can_attack = true
