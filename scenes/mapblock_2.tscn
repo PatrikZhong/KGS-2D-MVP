@@ -83,10 +83,6 @@ tile_set = SubResource("TileSet_8c0m4")
 tile_map_data = PackedByteArray("AAD8//r/AQABAAIAAAD9//r/AQABAAIAAAAAAPr/AQABAAIAAAABAPr/AQABAAIAAAD4//7/AQAAAAQAAAD//wQAAQABAAMAAAD/////AQADAAUAAAD9////AQADAAUAAAD9//z/AQADAAUAAAD///z/AQADAAUAAAD7/wIAAQAAAAcAAAD7//v/AQAAAAcAAAAFAP3/AQADAAcAAAA=")
 tile_set = SubResource("TileSet_8c0m4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(983, -277)
-zoom = Vector2(0.235, 0.235)
-
 [node name="spawnpoints" type="Node2D" parent="."]
 script = ExtResource("3_8c0m4")
 

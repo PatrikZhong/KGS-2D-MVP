@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://bhcxljtkxr00o"]
+[gd_scene load_steps=6 format=4 uid="uid://bhcxljtkxr00o"]
 
 [ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_7o58n"]
 [ext_resource type="PackedScene" uid="uid://cg0nx84532m4k" path="res://scenes/door_zone.tscn" id="1_fvpig"]
 [ext_resource type="Script" uid="uid://2ym4mc6lxnol" path="res://scenes/spawnpoints.gd" id="3_m7r1v"]
-[ext_resource type="Script" uid="uid://b36sepvecna0s" path="res://scenes/camera_2d.gd" id="4_na1nn"]
-[ext_resource type="Script" uid="uid://bx6gq4etqix3g" path="res://scenes/sub_viewport.gd" id="4_u5fgn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7r1v"]
 texture = ExtResource("1_7o58n")
@@ -106,29 +104,3 @@ position = Vector2(-1108, 819)
 
 [node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
 position = Vector2(-741, 1132)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(402, -462)
-zoom = Vector2(0.33, 0.33)
-position_smoothing_enabled = true
-script = ExtResource("4_na1nn")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Camera2D"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2540.0
-offset_top = -320.0
-offset_right = -2028.0
-offset_bottom = 192.0
-grow_horizontal = 0
-grow_vertical = 0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="SubViewport" type="SubViewport" parent="Camera2D/SubViewportContainer"]
-handle_input_locally = false
-render_target_update_mode = 4
-script = ExtResource("4_u5fgn")

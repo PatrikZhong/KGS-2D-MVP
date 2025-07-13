@@ -111,7 +111,3 @@ position = Vector2(261, 210)
 
 [node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
 position = Vector2(96, 129)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(641, -99)
-zoom = Vector2(0.605, 0.605)
