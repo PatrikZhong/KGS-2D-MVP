@@ -6,6 +6,9 @@ extends CharacterBody2D
 @onready var sprite = get_node("OrcSprite")
 var health = 100
 @onready var hp_bar = $Label
+var damage = 10
+var can_attack = true
+@onready var attack_timer = get_node("Timer")
 
 # State management
 enum State {
@@ -45,12 +48,20 @@ func _ready() -> void:
 	if not sprite and has_node("AnimatedSprite2D"):
 		sprite = ($AnimatedSprite2D)
 	update_state(State.IDLE)
+	attack_timer.timeout.connect(_on_timer_timeout)  # Add this line
 
 func _physics_process(delta: float) -> void:
 	# Check conditions in priority order
 	if attack_range.has_overlapping_bodies():
-		chase = false
-		update_state(State.ATTACK)
+		if can_attack:
+			can_attack = false
+			attack_timer.start()
+			for target in attack_range.get_overlapping_bodies():
+				print("attacked for ", damage)
+				chase = false
+				update_state(State.ATTACK)
+				target.take_damage(damage)
+				
 		#print("time to attack")
 	elif chase_range.has_overlapping_bodies():
 		chase = true
@@ -67,3 +78,5 @@ func _physics_process(delta: float) -> void:
 		update_state(State.IDLE)
 		velocity = Vector2.ZERO
 		#print("im chillin")
+func _on_timer_timeout() -> void:
+	can_attack = true
