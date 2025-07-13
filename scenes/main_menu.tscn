@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpjbg25n4ggpd"]
+[gd_scene load_steps=5 format=3 uid="uid://dp5ntpybtlb7a"]
 
 [ext_resource type="Script" uid="uid://dco75m6p35e38" path="res://scripts/menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bxvjhagsqdmxs" path="res://assets/backgrounds/ChatGPT_Image_8_apr.png" id="2_bqqt6"]
