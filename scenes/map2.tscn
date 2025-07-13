@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://deh1pkv4qsvyb"]
 
 [ext_resource type="Script" uid="uid://cb5p5gmnuvrpg" path="res://scripts/map.gd" id="1_rtqf6"]
-[ext_resource type="Texture2D" uid="uid://dtxrsku6j1bjn" path="res://assets/backgrounds/wooden-floor-background.jpg" id="2_u6ti8"]
+[ext_resource type="Texture2D" uid="uid://dvyc8qttrj2w1" path="res://assets/backgrounds/wooden-floor-background (1).jpg" id="2_rtqf6"]
 [ext_resource type="Texture2D" uid="uid://c21i48mo6q5v4" path="res://assets/mapIcons/Medieval_door.png" id="3_rutqx"]
 [ext_resource type="Texture2D" uid="uid://cs7tm1y8pup8l" path="res://assets/mapIcons/Medieval_door_open.png" id="4_ccs1r"]
 [ext_resource type="Texture2D" uid="uid://cd8xfchm8si0q" path="res://assets/buttons/play_new.png" id="5_hs16b"]
@@ -36,33 +36,33 @@ animations = [{
 [node name="map" type="Node2D" parent="."]
 script = ExtResource("1_rtqf6")
 
-[node name="Wooden-floor-background" type="Sprite2D" parent="map"]
-position = Vector2(576, 322.5)
-scale = Vector2(0.576, 0.485371)
-texture = ExtResource("2_u6ti8")
+[node name="Wooden-floor-background(1)" type="Sprite2D" parent="map"]
+position = Vector2(576, 326.5)
+scale = Vector2(0.575, 0.485371)
+texture = ExtResource("2_rtqf6")
 
 [node name="level2" type="AnimatedSprite2D" parent="map"]
-position = Vector2(417, 197)
+position = Vector2(375, 224)
 scale = Vector2(1.506, 1.398)
 sprite_frames = SubResource("SpriteFrames_btxqx")
 
 [node name="level3" type="AnimatedSprite2D" parent="map"]
-position = Vector2(440, 467)
+position = Vector2(502, 201)
 scale = Vector2(1.506, 1.398)
 sprite_frames = SubResource("SpriteFrames_btxqx")
 
 [node name="level1" type="AnimatedSprite2D" parent="map"]
-position = Vector2(173, 341)
+position = Vector2(172, 288)
 scale = Vector2(1.468, 1.398)
 sprite_frames = SubResource("SpriteFrames_btxqx")
 
 [node name="level4" type="AnimatedSprite2D" parent="map"]
-position = Vector2(667, 334)
+position = Vector2(612, 355)
 scale = Vector2(1.468, 1.398)
 sprite_frames = SubResource("SpriteFrames_btxqx")
 
 [node name="level5" type="AnimatedSprite2D" parent="map"]
-position = Vector2(946, 343)
+position = Vector2(757, 299)
 scale = Vector2(1.468, 1.398)
 sprite_frames = SubResource("SpriteFrames_btxqx")
 
