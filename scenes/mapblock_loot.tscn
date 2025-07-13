@@ -96,3 +96,17 @@ polygon = PackedVector2Array(-11, -14, -65, -32, 7, -77, 30, -76, 59, -91, 99, -
 position = Vector2(716, 64)
 build_mode = 1
 polygon = PackedVector2Array(-29, -23, -81, -50, -41, -72, -17, -52, 6, -47, 36, -51, 97, -14, 31, 23, -28, -2)
+
+[node name="spawnpoints" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(-81, 247)
+
+[node name="Area2D2" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(60, 268)
+
+[node name="Area2D3" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(261, 210)
+
+[node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(96, 129)
