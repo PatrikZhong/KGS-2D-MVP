@@ -21,6 +21,7 @@ Globals="*res://scripts/globals.gd"
 [global_group]
 
 Players="All four player characters"
+Enemies=""
 
 [input]
 

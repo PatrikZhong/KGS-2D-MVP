@@ -7,10 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="4_ltyrd"]
 [ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="5_px3lb"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pfea8"]
-radius = 1.0
-height = 9.60001
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksgxw"]
 atlas = ExtResource("3_pfea8")
 region = Rect2(0, 0, 100, 100)
@@ -169,6 +165,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pfea8"]
+radius = 1.0
+height = 9.60001
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ltyrd"]
 radius = 39.0
 
@@ -178,49 +178,56 @@ radius = 39.0
 script = ExtResource("1_4jhyb")
 
 [node name="playable_character_1" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
-position = Vector2(203, 319)
 scale = Vector2(5, 5)
 collision_layer = 3
 script = ExtResource("2_pfea8")
+
+[node name="unit_sprite" type="AnimatedSprite2D" parent="character_selector/playable_character_1"]
+position = Vector2(0, 2)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_uf15r")
+animation = &"attack"
 
 [node name="unit_collision" type="CollisionShape2D" parent="character_selector/playable_character_1"]
 position = Vector2(0.599991, 8.4)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_pfea8")
 
-[node name="unit_sprite" type="AnimatedSprite2D" parent="character_selector/playable_character_1"]
-position = Vector2(0, 2)
-sprite_frames = SubResource("SpriteFrames_uf15r")
-animation = &"attack"
-
 [node name="attack_range" type="Area2D" parent="character_selector/playable_character_1"]
-visible = false
 collision_layer = 0
 collision_mask = 4
 
 [node name="attack_range_shape" type="CollisionShape2D" parent="character_selector/playable_character_1/attack_range"]
 shape = SubResource("CircleShape2D_ltyrd")
 
+[node name="Timer" type="Timer" parent="character_selector/playable_character_1"]
+
 [node name="playable_character_2" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
-position = Vector2(-191, -30)
+position = Vector2(288, -2)
 scale = Vector2(5, 5)
-collision_layer = 3
+collision_layer = 7
 script = ExtResource("5_px3lb")
+
+[node name="unit_sprite" type="AnimatedSprite2D" parent="character_selector/playable_character_2"]
+position = Vector2(-0.199994, 0.200003)
+scale = Vector2(1, 1)
+sprite_frames = SubResource("SpriteFrames_uf15r")
+animation = &"attack"
 
 [node name="unit_collision" type="CollisionShape2D" parent="character_selector/playable_character_2"]
 position = Vector2(0.599991, 8.4)
 rotation = -1.57079
 shape = SubResource("CapsuleShape2D_pfea8")
 
-[node name="unit_sprite" type="AnimatedSprite2D" parent="character_selector/playable_character_2"]
-position = Vector2(0, 2)
-sprite_frames = SubResource("SpriteFrames_uf15r")
-animation = &"attack"
-
 [node name="attack_range" type="Area2D" parent="character_selector/playable_character_2"]
-visible = false
 collision_layer = 0
 collision_mask = 4
 
 [node name="attack_range_shape" type="CollisionShape2D" parent="character_selector/playable_character_2/attack_range"]
 shape = SubResource("CircleShape2D_ltyrd")
+
+[node name="Label" type="Label" parent="character_selector/playable_character_2"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="timeout" from="character_selector/playable_character_1/Timer" to="character_selector/playable_character_1" method="_on_timer_timeout"]
