@@ -1,0 +1,15 @@
+[gd_scene load_steps=6 format=3 uid="uid://i6jqpmnjmslh"]
+
+[ext_resource type="PackedScene" uid="uid://bhcxljtkxr00o" path="res://scenes/mapblock_1.tscn" id="1_1en6r"]
+[ext_resource type="PackedScene" uid="uid://c6yuww1sjqi1e" path="res://scenes/map_spawner.tscn" id="1_2q81j"]
+[ext_resource type="PackedScene" uid="uid://ccxvlbc2ev4sg" path="res://scenes/playable_characters.tscn" id="2_1en6r"]
+[ext_resource type="PackedScene" uid="uid://b2kld6a17ejku" path="res://scenes/mapblock_2.tscn" id="3_1fjpd"]
+[ext_resource type="PackedScene" uid="uid://dwl7d1e1v033p" path="res://scenes/mapblock_3.tscn" id="4_q1wer"]
+
+[node name="alex_map" type="Node2D"]
+
+[node name="map_spawner" parent="." instance=ExtResource("1_2q81j")]
+position = Vector2(166, 89)
+map_blocks = Array[PackedScene]([ExtResource("1_1en6r"), ExtResource("3_1fjpd"), ExtResource("4_q1wer")])
+
+[node name="character_logic" parent="." instance=ExtResource("2_1en6r")]
