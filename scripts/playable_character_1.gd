@@ -38,13 +38,13 @@ func updateAnimation(input: state):
 	current_state = input
 	match current_state:
 		state.idle:
-			sprite.play("idle")
+			sprite.play("soldier_idle")
 		state.attack:
-			sprite.play("attack")
+			sprite.play("soldier_attack")
 		state.walk:
-			sprite.play("walk")
+			sprite.play("soldier_walk")
 		state.death:
-			sprite.play("death")
+			sprite.play("soldier_death")
 	
 func _physics_process(delta):
 	
