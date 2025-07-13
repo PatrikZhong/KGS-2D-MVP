@@ -166,7 +166,7 @@ animations = [{
 [node name="Orc" instance=ExtResource("1_2byfh")]
 
 [node name="Base_Monster" parent="." index="0"]
-position = Vector2(1, 1)
+position = Vector2(0, 0)
 scale = Vector2(5, 5)
 collision_mask = 1
 
@@ -174,3 +174,13 @@ collision_mask = 1
 sprite_frames = SubResource("SpriteFrames_48uv6")
 animation = &"idle"
 frame_progress = 0.0580075
+
+[node name="Label" parent="Base_Monster" index="4"]
+offset_left = -24.2
+offset_top = -20.8
+offset_right = 15.8
+offset_bottom = 2.2
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="Base_Monster" index="5"]
+wait_time = 0.5
