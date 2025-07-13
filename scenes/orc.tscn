@@ -1,9 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://wrp11get3ry8"]
+[gd_scene load_steps=28 format=3 uid="uid://wrp11get3ry8"]
 
 [ext_resource type="PackedScene" uid="uid://crvjqf1d0ed2t" path="res://scenes/base_monster_logic.tscn" id="1_2byfh"]
 [ext_resource type="Texture2D" uid="uid://bs4r5knp61gpd" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Attack01.png" id="2_nvs4g"]
 [ext_resource type="Texture2D" uid="uid://d1o8rfuyq7lk2" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Idle.png" id="3_xme4o"]
 [ext_resource type="Texture2D" uid="uid://d4j7p5cvrxbjv" path="res://assets/characters/characters/Characters(100x100)/Orc/Orc/Orc-Walk.png" id="4_duj3f"]
+[ext_resource type="Texture2D" uid="uid://dk8trrptnsmud" path="res://assets/Dark Fantasy UI/Boss-bars/Bossbar_7.png" id="5_xme4o"]
+[ext_resource type="Texture2D" uid="uid://b60qsv3ts217j" path="res://assets/Dark Fantasy UI/Boss-bars/Filler2.png" id="6_duj3f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ik4fe"]
 atlas = ExtResource("2_nvs4g")
@@ -184,3 +186,13 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="Base_Monster" index="5"]
 wait_time = 0.5
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Base_Monster" index="6"]
+offset_left = -19.4
+offset_top = -14.2
+offset_right = 172.6
+offset_bottom = 3.80001
+scale = Vector2(0.2, 0.2)
+texture_under = ExtResource("5_xme4o")
+texture_progress = ExtResource("6_duj3f")
+texture_progress_offset = Vector2(1, 1)
