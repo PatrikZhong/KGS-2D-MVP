@@ -58,7 +58,8 @@ func _physics_process(delta: float) -> void:
 		update_state(State.CHASE)
 		#print("im chasing")
 		# Move towards player
-		velocity = get_parent().to_local(position.direction_to(target_player.position) * run_speed)
+		#velocity = get_parent().to_local(position.direction_to(target_player.position) * run_speed)
+		velocity = global_position.direction_to(target_player.position) * run_speed
 		move_and_slide()
 	else:
 		chase = false
