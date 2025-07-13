@@ -1,3 +1,11 @@
-[gd_scene load_steps=0 format=3 uid="uid://ddrj2gf3tgbdf"]
+[gd_scene load_steps=3 format=3 uid="uid://ddrj2gf3tgbdf"]
+
+[ext_resource type="PackedScene" uid="uid://ccxvlbc2ev4sg" path="res://scenes/playable_characters.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c6yuww1sjqi1e" path="res://scenes/map_spawner.tscn" id="2_lnu2h"]
 
 [node name="game" type="Node2D"]
+
+[node name="character_logic" parent="." groups=["Players"] instance=ExtResource("1_yqjtg")]
+
+[node name="map_spawner" parent="." instance=ExtResource("2_lnu2h")]
+z_index = -1
