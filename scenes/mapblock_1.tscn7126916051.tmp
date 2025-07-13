@@ -108,13 +108,14 @@ position = Vector2(-1108, 819)
 position = Vector2(-741, 1132)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(402, -462)
+position = Vector2(-1637, -1535)
+anchor_mode = 0
 zoom = Vector2(0.33, 0.33)
 position_smoothing_enabled = true
 script = ExtResource("4_na1nn")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Camera2D"]
-anchors_preset = 3
+anchors_preset = -1
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
