@@ -5,8 +5,8 @@ extends CharacterBody2D
 @export var run_speed: float = 100
 @onready var sprite = get_node("OrcSprite")
 var health = 100
-@onready var hp_bar = $Label
-var damage = 10
+@onready var hp_bar = get_node("TextureProgressBar")
+var damage = 1
 var can_attack = true
 @onready var attack_timer = get_node("Timer")
 
@@ -22,7 +22,7 @@ var chase = false
 var target_player = null
 func take_damage(damage: int):
 	health = health - damage
-	hp_bar.text = str(health)
+	hp_bar.value = health
 
 	if health <= 0:
 		update_state(State.IDLE)
