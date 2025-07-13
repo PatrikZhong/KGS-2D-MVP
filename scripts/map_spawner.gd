@@ -45,5 +45,13 @@ func _ready():
 	self.timer.timeout.connect(Callable(self, "_on_timeout"))
 	
 	var spawnpoints = get_tree().get_nodes_in_group("spawnpoints")
-	
+	if spawnpoints != []:
+		var characters = get_tree().get_nodes_in_group("players")
+		print(characters)
+		characters[0].get_children()
+		
+		#for i in range(characters.size()):
+		#	characters[i].transform.x = spawnpoints[i].transform.x
+		#	characters[i].transform.y = spawnpoints[i].transform.y
+			
 	

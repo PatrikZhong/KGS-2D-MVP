@@ -8,9 +8,8 @@
 
 [node name="alex_map" type="Node2D"]
 
-[node name="character_logic" parent="." groups=["Players"] instance=ExtResource("2_1en6r")]
-top_level = true
-
 [node name="map_spawner" parent="." instance=ExtResource("1_2q81j")]
 position = Vector2(166, 89)
 map_blocks = Array[PackedScene]([ExtResource("1_1en6r"), ExtResource("3_1fjpd"), ExtResource("4_q1wer")])
+
+[node name="character_logic" parent="." instance=ExtResource("2_1en6r")]
