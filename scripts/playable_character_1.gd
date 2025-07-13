@@ -3,10 +3,10 @@ extends CharacterBody2D
 @onready var character_selector = get_parent()
 @onready var attack_range = get_node("attack_range")
 @onready var attack_timer = get_node("Timer")
+@onready var hp_bar = get_node("TextureProgressBar")
 @onready var sprite = $unit_sprite
-@onready var hp_bar = $Label
 
-var speed = 500
+var speed = 350
 var click_position = Vector2()
 var target_position = Vector2()
 var current_state = state.idle
@@ -24,7 +24,7 @@ enum state {
 
 func take_damage(damage: int):
 	health = health - damage
-	hp_bar.text = str(health)
+	hp_bar.value = health
 
 	if health <= 0:
 		updateAnimation(state.death)
@@ -32,6 +32,7 @@ func take_damage(damage: int):
 
 func _ready():
 	updateAnimation(current_state)
+	hp_bar.value = health
 
 func updateAnimation(input: state):
 	current_state = input
