@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://b2kld6a17ejku"]
+[gd_scene load_steps=7 format=4 uid="uid://b2kld6a17ejku"]
 
 [ext_resource type="PackedScene" uid="uid://cg0nx84532m4k" path="res://scenes/door_zone.tscn" id="1_v28dg"]
 [ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_wtfsc"]
 [ext_resource type="Script" uid="uid://2ym4mc6lxnol" path="res://scenes/spawnpoints.gd" id="3_8c0m4"]
+[ext_resource type="PackedScene" uid="uid://wrp11get3ry8" path="res://scenes/orc.tscn" id="4_rfepi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v28dg"]
 texture = ExtResource("1_wtfsc")
@@ -55,10 +56,16 @@ sources/1 = SubResource("TileSetAtlasSource_v28dg")
 [node name="door_zones" type="Node2D" parent="."]
 
 [node name="door_zone" parent="door_zones" instance=ExtResource("1_v28dg")]
-position = Vector2(-879, 482)
+top_level = true
+position = Vector2(-912, 560)
+rotation = 0.453786
+scale = Vector2(2.15, 2.15)
 
 [node name="door_zone2" parent="door_zones" instance=ExtResource("1_v28dg")]
-position = Vector2(-1086, -929)
+top_level = true
+position = Vector2(-1107, -909)
+rotation = 1.14319
+scale = Vector2(2.29, 2.29)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD7//r/AQADAAEAAAD7//v/AQADAAEAAAD7//z/AQAAAAEAAAD7//3/AQAAAAEAAAD7//7/AQABAAEAAAD7////AQAAAAEAAAD7/wAAAQADAAEAAAD7/wEAAQADAAEAAAD7/wIAAQABAAEAAAD8//r/AQACAAEAAAD8//v/AQACAAEAAAD8//z/AQAAAAEAAAD8//3/AQAAAAEAAAD8//7/AQADAAEAAAD8////AQABAAEAAAD8/wAAAQACAAEAAAD8/wEAAQABAAEAAAD8/wIAAQACAAEAAAD9//r/AQACAAEAAAD9//v/AQAAAAEAAAD9//z/AQADAAEAAAD9//3/AQADAAEAAAD9//7/AQAAAAEAAAD9////AQABAAEAAAD9/wAAAQACAAEAAAD9/wEAAQACAAEAAAD9/wIAAQACAAEAAAD+//r/AQAAAAEAAAD+//v/AQACAAEAAAD+//z/AQABAAEAAAD+////AQACAAEAAAD+/wAAAQADAAEAAAD+/wEAAQACAAEAAAD+/wIAAQADAAEAAAD///r/AQACAAEAAAD///v/AQAAAAEAAAD///z/AQACAAEAAAD/////AQABAAEAAAD//wAAAQACAAEAAAD//wEAAQADAAEAAAD//wIAAQABAAEAAAAAAPr/AQAAAAEAAAAAAPv/AQADAAEAAAAAAPz/AQADAAEAAAAAAP3/AQACAAEAAAAAAP7/AQAAAAEAAAAAAP//AQACAAEAAAAAAAAAAQADAAEAAAAAAAEAAQABAAEAAAAAAAIAAQAAAAEAAAABAPr/AQACAAEAAAABAPv/AQACAAEAAAABAPz/AQACAAEAAAABAP3/AQAAAAEAAAABAP7/AQABAAEAAAABAP//AQADAAEAAAABAAAAAQADAAEAAAABAAEAAQACAAEAAAABAAIAAQABAAEAAAACAPr/AQADAAEAAAACAPv/AQADAAEAAAACAPz/AQAAAAEAAAACAP3/AQADAAEAAAACAP7/AQABAAEAAAACAP//AQADAAEAAAACAAAAAQABAAEAAAACAAEAAQADAAEAAAACAAIAAQACAAEAAAADAP//AQADAAEAAAADAP7/AQAAAAEAAAADAP3/AQACAAEAAAAEAP7/AQABAAEAAAAFAP7/AQABAAEAAAAEAP3/AQABAAEAAAAFAP3/AQAAAAEAAAADAPz/AQAAAAEAAAAAAAMAAQADAAEAAAD//wMAAQAAAAEAAAD+/wMAAQABAAEAAAD9/wMAAQACAAEAAAD//wQAAQACAAEAAAD+/wQAAQACAAEAAAD6/wAAAQACAAEAAAD6////AQADAAEAAAD6//7/AQAAAAEAAAD6//3/AQACAAEAAAD5//7/AQABAAEAAAD4//7/AQADAAEAAAD4////AQAAAAEAAAD5////AQABAAEAAAAGAP7/AQABAAEAAAAHAP7/AQACAAEAAAAIAP7/AQAAAAEAAAAIAP3/AQADAAEAAAAHAP3/AQAAAAEAAAAGAP3/AQABAAEAAAAIAPz/AQADAAEAAAAIAPv/AQADAAEAAAAIAPr/AQACAAEAAAAIAPn/AQADAAEAAAAHAPn/AQACAAEAAAAHAPr/AQAAAAEAAAAHAPv/AQADAAEAAAAHAPz/AQAAAAEAAAD3//7/AQACAAMAAAA=")
@@ -94,3 +101,33 @@ position = Vector2(2365, 493)
 
 [node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
 position = Vector2(2254, 691)
+
+[node name="Orc" parent="." instance=ExtResource("4_rfepi")]
+position = Vector2(-1664, -230)
+
+[node name="Orc2" parent="." instance=ExtResource("4_rfepi")]
+position = Vector2(-1361, -373)
+
+[node name="Orc3" parent="." instance=ExtResource("4_rfepi")]
+position = Vector2(-332, -699)
+
+[node name="Orc4" parent="." instance=ExtResource("4_rfepi")]
+position = Vector2(-562, -552)
+
+[node name="Orc5" parent="." instance=ExtResource("4_rfepi")]
+position = Vector2(-1150, 633)
+
+[node name="Orc6" parent="." instance=ExtResource("4_rfepi")]
+position = Vector2(899, 427)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-1134, 411)
+build_mode = 1
+polygon = PackedVector2Array(-14, -15, -65, -27, 134, -127, -65, -230, 134, -329, -262, -530, -187, -569, -121, -533, -53, -565, -123, -607, 135, -730, -67, -824, 132, -935, -270, -1126, 139, -1334, 527, -1132, 742, -1233, 929, -1133, 1209, -1272, 1279, -1233, 1348, -1264, 1293, -1309, 1541, -1441, 1808, -1296, 1742, -1252, 1779, -1226, 1862, -1266, 1983, -1205, 1940, -1163, 1996, -1123, 2059, -1163, 2554, -923, 2483, -868, 2589, -822, 2672, -870, 2817, -794, 2731, -763, 2797, -724, 2850, -761, 3132, -632, 2743, -427, 2933, -332, 2735, -233, 2992, -104, 2930, -66, 3006, -27, 3074, -65, 3334, 70, 4131, -325, 4537, -125, 3336, 481, 2346, -25, 2151, 75, 1946, -25, 1340, 270, 945, 59, 750, 181, 539, 81, 333, 159)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(2, -223)
+build_mode = 1
+polygon = PackedVector2Array(15, 13, 395, 204, 796, 5, 399, -192, 3, -2)

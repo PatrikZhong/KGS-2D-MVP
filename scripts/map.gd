@@ -74,6 +74,6 @@ func _input(event: InputEvent) -> void:
 func _send_selected() -> void:
 	print("sending selected")
 	emit_signal("path_selected")
-	get_tree().change_scene_to_file("res://scenes/alex_map.tscn")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 	
 					

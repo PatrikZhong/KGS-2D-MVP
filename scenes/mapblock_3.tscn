@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://dwl7d1e1v033p"]
+[gd_scene load_steps=6 format=4 uid="uid://dwl7d1e1v033p"]
 
 [ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_stclf"]
 [ext_resource type="Script" uid="uid://2ym4mc6lxnol" path="res://scenes/spawnpoints.gd" id="2_dyd6q"]
+[ext_resource type="PackedScene" uid="uid://wrp11get3ry8" path="res://scenes/orc.tscn" id="3_g1rks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dyd6q"]
 texture = ExtResource("1_stclf")
@@ -96,3 +97,24 @@ position = Vector2(-658, 966)
 
 [node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
 position = Vector2(-246, 930)
+
+[node name="Orc" parent="." instance=ExtResource("3_g1rks")]
+position = Vector2(439, -74)
+
+[node name="Orc2" parent="." instance=ExtResource("3_g1rks")]
+position = Vector2(1313, 150)
+
+[node name="Orc3" parent="." instance=ExtResource("3_g1rks")]
+position = Vector2(747, 124)
+
+[node name="Orc4" parent="." instance=ExtResource("3_g1rks")]
+position = Vector2(2618, -963)
+
+[node name="Orc5" parent="." instance=ExtResource("3_g1rks")]
+position = Vector2(2861, -591)
+
+[node name="Orc6" parent="." instance=ExtResource("3_g1rks")]
+position = Vector2(-204, -1570)
+
+[node name="Orc7" parent="." instance=ExtResource("3_g1rks")]
+position = Vector2(403, -1804)
