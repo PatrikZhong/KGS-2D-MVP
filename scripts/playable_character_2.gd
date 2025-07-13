@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var character_selector = get_parent()
 @onready var sprite = $unit_sprite
 @onready var attack_range = get_node("attack_range")
+@onready var cooldown = $CooldownTimer
+@onready var hp_bar = $Label
 
 var speed = 500
 var click_position = Vector2()
@@ -10,11 +12,22 @@ var target_position = Vector2()
 var currentState = state.idle
 var isRunning = false
 
+var health = 100
+
 enum state {
 	idle,
 	walk,
 	attack
 }
+
+func take_damage(damage: int):
+	health = health - damage
+	hp_bar.text = str(health)
+	
+	print("YOU JUST TOOK ", damage, " DAMAGE! Remaining: ", health)
+	if health < 0:
+		queue_free()
+	
 
 func _ready():
 	updateAnimation(currentState)
