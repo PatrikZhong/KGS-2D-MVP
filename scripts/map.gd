@@ -13,10 +13,19 @@ extends Node2D
 var selected = null
 
 @onready var layers = {
-	1: [node1],
-	2: [node2, node3],
-	3: [node4],
-	4: [node5],
+	'map1': {
+		1: [node1],
+		2: [node2, node3],
+		3: [node4],
+		4: [node5],
+	},
+	'map2': {
+		1: [node1],
+		2: [node2],
+		3: [node3],
+		4: [node4],
+		5: [node5],
+	}
 }
 
 signal path_selected
@@ -25,14 +34,14 @@ signal path_selected
 func _ready() -> void:		
 	play_button.visible = false
 	
-	var next_layers = layers.get(Globals.done_collumns[-1] + 1)
+	var next_layers = layers[Globals.current_map].get(Globals.done_collumns[-1] + 1)
 	
 	if next_layers != null:
 		for node in next_layers:
 			node.frame = 1
 	
 	for column in Globals.done_collumns.slice(1, Globals.done_collumns.size()):
-		for node in layers[column]:
+		for node in layers[Globals.current_map][column]:
 			node.modulate = Color(0.5, 0.5, 0.5)
 	
 	pass # Replace with function body.
@@ -60,7 +69,7 @@ func _input(event: InputEvent) -> void:
 			for node in nodes:
 				if _is_sprite_clicked(node, mouse_pos):
 					var next_layer = Globals.done_collumns[-1] + 1
-					if layers.has(next_layer) and node in layers[next_layer]:
+					if layers[Globals.current_map].has(next_layer) and node in layers[Globals.current_map][next_layer]:
 						node.modulate = Color(0.6, 1.0, 0.6)
 						if selected != null and selected != node:
 							selected.modulate = Color(1, 1, 1)
