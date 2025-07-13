@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://dwl7d1e1v033p"]
+[gd_scene load_steps=7 format=4 uid="uid://dwl7d1e1v033p"]
 
+[ext_resource type="PackedScene" uid="uid://cg0nx84532m4k" path="res://scenes/door_zone.tscn" id="1_60roj"]
 [ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_stclf"]
 [ext_resource type="Script" uid="uid://2ym4mc6lxnol" path="res://scenes/spawnpoints.gd" id="2_dyd6q"]
 [ext_resource type="PackedScene" uid="uid://wrp11get3ry8" path="res://scenes/orc.tscn" id="3_g1rks"]
@@ -51,6 +52,14 @@ tile_size = Vector2i(400, 200)
 sources/1 = SubResource("TileSetAtlasSource_dyd6q")
 
 [node name="mapblock_3" type="Node2D"]
+
+[node name="door_zones" type="Node2D" parent="."]
+
+[node name="door_zone" parent="door_zones" instance=ExtResource("1_60roj")]
+top_level = true
+position = Vector2(-92.9999, -2344)
+rotation = -0.507891
+scale = Vector2(2.625, 2.625)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1311, -739)
