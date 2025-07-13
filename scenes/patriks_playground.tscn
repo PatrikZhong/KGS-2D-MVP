@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bu01qowib8mse" path="res://Forest Pixel BackGround/BG1.png" id="1_gvsmn"]
 [ext_resource type="PackedScene" uid="uid://wrp11get3ry8" path="res://scenes/orc.tscn" id="2_gvsmn"]
-[ext_resource type="PackedScene" uid="uid://ccxvlbc2ev4sg" path="res://scenes/playable_characters.tscn" id="3_is3tg"]
+[ext_resource type="PackedScene" uid="uid://3ewxn4vsg10t" path="res://scenes/player_characters.tscn" id="3_is3tg"]
 
 [sub_resource type="TileSet" id="TileSet_qxwwh"]
 
@@ -21,8 +21,7 @@ texture = ExtResource("1_gvsmn")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(56, 39)
 
-[node name="character_logic" parent="." instance=ExtResource("3_is3tg")]
-position = Vector2(-83, -62)
-
 [node name="Orc" parent="." instance=ExtResource("2_gvsmn")]
 position = Vector2(418, -47)
+
+[node name="PlayerCharacters" parent="." instance=ExtResource("3_is3tg")]

@@ -4,6 +4,8 @@ extends CharacterBody2D
 @onready var chase_range = get_node("InitiateChase")
 @export var run_speed: float = 10
 @onready var sprite = get_node("OrcSprite")
+var health = 100
+@onready var hp_bar = $Label
 
 # State management
 enum State {
@@ -15,6 +17,13 @@ enum State {
 var current_state = State.IDLE
 var chase = false
 var target_player = null
+func take_damage(damage: int):
+	health = health - damage
+	hp_bar.text = str(health)
+
+	if health <= 0:
+		update_state(State.IDLE)
+		queue_free()
 
 func update_state(new_state: State):
 	current_state = new_state
@@ -36,7 +45,7 @@ func _ready() -> void:
 	if not sprite and has_node("AnimatedSprite2D"):
 		sprite = ($AnimatedSprite2D)
 	update_state(State.IDLE)
-	
+
 func _physics_process(delta: float) -> void:
 	# Check conditions in priority order
 	if attack_range.has_overlapping_bodies():
@@ -49,7 +58,7 @@ func _physics_process(delta: float) -> void:
 		update_state(State.CHASE)
 		#print("im chasing")
 		# Move towards player
-		velocity = position.direction_to(target_player.position) * run_speed
+		velocity = get_parent().to_local(position.direction_to(target_player.position) * run_speed)
 		move_and_slide()
 	else:
 		chase = false

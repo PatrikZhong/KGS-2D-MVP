@@ -1,37 +1,35 @@
 extends Node2D
 
-var node1 = null
-var node2 = null
-var node3 = null
+@onready var node1 = get_node("level1")
+@onready var node2 = get_node("level2")
+@onready var node3 = get_node("level3")
+@onready var node4 = get_node("level4")
+@onready var node5 = get_node("level5")
 
-var nodes = []
+@onready var nodes = [node1, node2, node3, node4, node5]
 
-var play_button = null 
+@onready var play_button = get_node("play_button")
 
 var selected = null
 
-var layers = {
+@onready var layers = {
 	1: [node1],
 	2: [node2, node3],
+	3: [node4],
+	4: [node5],
 }
 
 signal path_selected
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	node1 = get_node("AnimatedSprite2D2")
-	node2 = get_node("AnimatedSprite2D3")
-	node3 = get_node("AnimatedSprite2D4")
-	
-	nodes = [node1, node2, node3]
-	
-	play_button = get_node("AnimatedSprite2D")
+func _ready() -> void:		
 	play_button.visible = false
 	
-	layers = {
-		1: [node1],
-		2: [node2, node3],
-	}
+	var next_layers = layers.get(Globals.done_collumns[-1] + 1)
+	
+	if next_layers != null:
+		for node in next_layers:
+			node.frame = 1
 	
 	for column in Globals.done_collumns.slice(1, Globals.done_collumns.size()):
 		for node in layers[column]:
@@ -76,6 +74,6 @@ func _input(event: InputEvent) -> void:
 func _send_selected() -> void:
 	print("sending selected")
 	emit_signal("path_selected")
-	get_tree().change_scene_to_file("res://scenes/alex_map.tscn")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 	
 					
