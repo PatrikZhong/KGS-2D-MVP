@@ -38,6 +38,12 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Base_Monster/InitiateAttack"]
 shape = SubResource("CircleShape2D_r1581")
 
+[node name="Label" type="Label" parent="Base_Monster"]
+offset_left = -75.0
+offset_top = -60.0
+offset_right = -35.0
+offset_bottom = -37.0
+
 [connection signal="body_entered" from="Base_Monster/InitiateChase" to="Base_Monster" method="_on_initiate_chase_body_entered"]
 [connection signal="body_exited" from="Base_Monster/InitiateChase" to="Base_Monster" method="_on_initiate_chase_body_exited"]
 [connection signal="body_entered" from="Base_Monster/InitiateAttack" to="Base_Monster" method="_on_initiate_attack_body_entered"]

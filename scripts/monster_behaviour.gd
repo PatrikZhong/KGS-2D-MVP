@@ -1,70 +1,69 @@
 extends CharacterBody2D
+# Node references
 @onready var attack_range = get_node("InitiateAttack")
 @onready var chase_range = get_node("InitiateChase")
-@export var sprite: AnimatedSprite2D
-var run_speed = 500
-enum state {
-	idle, 
-	walk, 
-	attack,
-	chase
-}
-var current_state = state.idle
-var chase = false
-var target_player = null  # Changed from 'player' to 'target_player'
+@export var run_speed: float = 10
+@onready var sprite = get_node("OrcSprite")
+var health = 100
+@onready var hp_bar = $Label
 
-func updateState(new_state):
+# State management
+enum State {
+	IDLE, 
+	WALK, 
+	ATTACK,
+	CHASE
+}
+var current_state = State.IDLE
+var chase = false
+var target_player = null
+func take_damage(damage: int):
+	health = health - damage
+	hp_bar.text = str(health)
+
+	if health <= 0:
+		update_state(State.IDLE)
+		queue_free()
+
+func update_state(new_state: State):
 	current_state = new_state
 	match current_state:
-		state.idle:
-			sprite.play("idle")
-		state.walk:
-			sprite.play("walk")
-		state.attack:
-			sprite.play("attack")
+		State.IDLE:
+			if sprite:
+				sprite.play("idle")
+		State.WALK:
+			if sprite:
+				sprite.play("walk")
+		State.ATTACK:
+			if sprite:
+				sprite.play("attack")
+		State.CHASE:
+			if sprite:
+				sprite.play("walk")  
 
 func _ready() -> void:
-	if sprite and has_node("AnimatedSprite2D"):
-		$Sprite2D.texture = sprite
-	updateState(state.idle)
-	# No longer need to get first player in group
+	if not sprite and has_node("AnimatedSprite2D"):
+		sprite = ($AnimatedSprite2D)
+	update_state(State.IDLE)
 
-func _process(delta: float) -> void:
-	if chase and target_player:
-		velocity = position.direction_to(target_player.position) * run_speed
-		move_and_slide()
-		
 func _physics_process(delta: float) -> void:
+	# Check conditions in priority order
 	if attack_range.has_overlapping_bodies():
-		updateState(state.attack)
-	if chase_range.has_overlapping_bodies():
-		updateState(state.walk)
+		chase = false
+		update_state(State.ATTACK)
+		#print("time to attack")
+	elif chase_range.has_overlapping_bodies():
 		chase = true
+		target_player = chase_range.get_overlapping_bodies()[0]
+		update_state(State.CHASE)
+		#print("im chasing")
+		# Move towards player
+		#velocity = get_parent().to_local(position.direction_to(target_player.position) * run_speed)
+		velocity = global_position.direction_to(target_player.position) * run_speed
+		move_and_slide()
 	else:
 		chase = false
-		updateState(state.idle)
-		
-	
-#func _on_initiate_chase_body_entered(body: Node2D) -> void:
-	## Check if the body is in the Players group
-	#if body.is_in_group("Players"):
-		#target_player = body
-		#updateState(state.walk)
-		#chase = true
-
-#func _on_initiate_chase_body_exited(body: Node2D) -> void:
-	## Only stop chasing if the exiting body is our current target
-	#if body == target_player:
-		#chase = false
-		#target_player = null
-		#updateState(state.idle)
-
-#func _on_initiate_attack_body_entered(body: Node2D) -> void:
-	## Only attack if this is our current target
-	#if body == target_player:
-		#updateState(state.attack)
-
-#func _on_initiate_attack_body_exited(body: Node2D) -> void:
-	## Only change state if the exiting body is our current target
-	#if body == target_player:
-		#updateState(state.walk)
+		target_player = null
+		update_state(State.IDLE)
+		velocity = Vector2.ZERO
+		#print("im chillin")
