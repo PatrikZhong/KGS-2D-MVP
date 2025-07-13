@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ckkf06tvhdv4o" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Idle.png" id="4_mvp8w"]
 [ext_resource type="Texture2D" uid="uid://vrfescgeoyxb" path="res://assets/characters/characters/Characters(100x100)/Soldier/Soldier/Soldier-Walk.png" id="5_4hakt"]
 [ext_resource type="Script" uid="uid://cqd0ptlmfjy2j" path="res://scripts/playable_character_2.gd" id="6_5rto2"]
+[ext_resource type="Texture2D" uid="uid://cujhannjyt58" path="res://assets/Dark Fantasy UI/Health Bar/Blood_Filler.png" id="7_x45ie"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksgxw"]
 atlas = ExtResource("3_x45ie")
@@ -240,6 +241,13 @@ shape = SubResource("CircleShape2D_i3yvg")
 [node name="Label" type="Label" parent="character_selector/playable_character_1"]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="character_selector/playable_character_1"]
+offset_left = 36.0
+offset_top = 15.0
+offset_right = 169.0
+offset_bottom = 51.0
+texture_progress = ExtResource("7_x45ie")
 
 [node name="playable_character_2" type="CharacterBody2D" parent="character_selector" groups=["Players"]]
 position = Vector2(0.999969, 1.99997)

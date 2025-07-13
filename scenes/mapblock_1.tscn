@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_7o58n"]
 [ext_resource type="PackedScene" uid="uid://cg0nx84532m4k" path="res://scenes/door_zone.tscn" id="1_fvpig"]
-[ext_resource type="Script" uid="uid://2ym4mc6lxnol" path="res://scenes/spawnpoints.gd" id="3_m7r1v"]
+[ext_resource type="Script" path="res://scenes/spawnpoints.gd" id="3_m7r1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7o58n"]
 texture = ExtResource("1_7o58n")
