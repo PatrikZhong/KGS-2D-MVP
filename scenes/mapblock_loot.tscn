@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=4 uid="uid://pyn4d8l14r82"]
+
+[ext_resource type="Texture2D" uid="uid://cvdrbsmplrx2q" path="res://assets/dungeonkit/spritesheet.png" id="1_lf5ck"]
+[ext_resource type="PackedScene" uid="uid://cg0nx84532m4k" path="res://scenes/door_zone.tscn" id="2_iso3f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixfrp"]
+texture = ExtResource("1_lf5ck")
+texture_region_size = Vector2i(400, 436)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_h5xbb"]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(400, 200)
+sources/1 = SubResource("TileSetAtlasSource_ixfrp")
+
+[node name="mapblock_loot" type="Node2D"]
+
+[node name="door_zones" type="Node2D" parent="."]
+
+[node name="door_zone" parent="door_zones" instance=ExtResource("2_iso3f")]
+top_level = true
+position = Vector2(1109, -291)
+rotation = 0.471239
+scale = Vector2(1.765, 1.765)
+
+[node name="tiles" type="Node2D" parent="."]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="tiles"]
+tile_map_data = PackedByteArray("AAAAAAEAAQABAAEAAAAAAAAAAQAAAAEAAAD//wAAAQACAAEAAAABAAAAAQACAAEAAAABAP//AQABAAEAAAACAP//AQAAAAEAAAAAAP//AQACAAEAAAD/////AQAAAAEAAAD+////AQADAAEAAAD+//7/AQACAAEAAAD+//3/AQABAAEAAAD///z/AQAAAAEAAAAAAPz/AQABAAEAAAABAPz/AQACAAEAAAABAP3/AQACAAEAAAACAP3/AQAAAAEAAAACAP7/AQAAAAEAAAABAP7/AQACAAEAAAAAAP7/AQAAAAEAAAD///7/AQABAAEAAAD///3/AQACAAEAAAAAAP3/AQACAAEAAAD+//z/AQABAAAAAAD///v/AQABAAAAAAAAAPv/AQABAAAAAAABAPv/AQABAAAAAAA=")
+tile_set = SubResource("TileSet_h5xbb")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="tiles"]
+tile_map_data = PackedByteArray("AAD+////AQAAAAAAAAD+//7/AQAAAAAAAAD+//3/AQAAAAAAAAD///z/AQAAAAAAAAAAAAEAAQABAAMAAAABAAAAAQACAAIAAAD//wAAAQAAAAIAAAA=")
+tile_set = SubResource("TileSet_h5xbb")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="tiles"]
+tile_map_data = PackedByteArray("AAD+////AQAAAAYAAAD+//7/AQAAAAYAAAA=")
+tile_set = SubResource("TileSet_h5xbb")
+
+[node name="TileMapLayer4" type="TileMapLayer" parent="tiles"]
+tile_map_data = PackedByteArray("AAD///7/AQADAAYAAAABAPz/AQADAAYAAAACAP3/AQADAAYAAAAAAP7/AQADAAUAAAABAP7/AQAAAAYAAAD///3/AQACAAUAAAD///z/AQAAAAYAAAAAAPv/AQABAAMAAAAAAPz/AQADAAQAAAA=")
+tile_set = SubResource("TileSet_h5xbb")
+
+[node name="TileMapLayer5" type="TileMapLayer" parent="tiles"]
+tile_map_data = PackedByteArray("AAD///7/AQADAAcAAAABAPz/AQADAAcAAAACAP3/AQADAAcAAAAAAP7/AQADAAUAAAABAP7/AQAAAAcAAAD///3/AQACAAUAAAD+////AQAAAAcAAAD+//7/AQAAAAcAAAD///z/AQAAAAcAAAA=")
+tile_set = SubResource("TileSet_h5xbb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(0, -18)
+build_mode = 1
+polygon = PackedVector2Array(-14, -14, -196, -99, -119, -136, -51, -102, 16, -138, -51, -172, 88, -241, 145, -205, 214, -236, 150, -274, 406, -400, 604, -299, 680, -338, 745, -299, 813, -334, 749, -369, 805, -399, 1243, -180, 1197, -139, 1265, -102, 1333, -136, 1399, -100, 1200, 0, 1259, 28, 1196, 66, 1263, 101, 1331, 64, 1402, 100, 801, 403, 604, 298, 520, 343, 472, 303, 430, 325, 468, 359, 405, 399, 197, 295, 4, 398, -203, 299, -3, 200, -200, 98, -116, 59, -74, 98, -26, 67, -68, 30, 1, -1)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(464, -119)
+build_mode = 1
+polygon = PackedVector2Array(-11, -14, -65, -32, 7, -77, 30, -76, 59, -91, 99, -64, 58, -47, 54, -23, 3, -1)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(716, 64)
+build_mode = 1
+polygon = PackedVector2Array(-29, -23, -81, -50, -41, -72, -17, -52, 6, -47, 36, -51, 97, -14, 31, 23, -28, -2)
+
+[node name="spawnpoints" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(-81, 247)
+
+[node name="Area2D2" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(60, 268)
+
+[node name="Area2D3" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(261, 210)
+
+[node name="Area2D4" type="Area2D" parent="spawnpoints" groups=["spawnpoints"]]
+position = Vector2(96, 129)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(641, -99)
+zoom = Vector2(0.605, 0.605)

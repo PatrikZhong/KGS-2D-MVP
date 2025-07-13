@@ -15,3 +15,6 @@ func _process(delta: float) -> void:
 	elif Input.is_action_just_pressed("ui_2"):
 		print("selected unit 2")
 		active = 2
+	elif Input.is_action_just_pressed("ui_3"):
+		print("selected unit 2")
+		active = 3
